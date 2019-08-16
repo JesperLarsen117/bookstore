@@ -1,0 +1,45 @@
+$font-color: #414141;
+$font-color2: #eee;
+$highlight-color: #20CAAE;
+$bg-color: #E5E5E5;
+$bg-box-color: #fff;
+
+
+
+// 'Mixin for Drop Shadow on Cards'
+@mixin cardShadow($h: 2px, $v: 3px, $b:15px, $brand-color: rgba(0,0,0,.25)){
+    -webkit-box-shadow : $h $v $b $brand-color;
+    -moz-box-shadow : $h $v $b $brand-color;
+    box-shadow : $h $v $b $brand-color;
+    }
+// 'Mixin for Drop Shadow on Posters'
+@mixin posterShadow($h: 2px, $v: 5px, $b:30px, $brand-color: rgba(0,0,0,.25)){
+    -webkit-box-shadow : $h $v $b $brand-color;
+    -moz-box-shadow : $h $v $b $brand-color;
+    box-shadow : $h $v $b $brand-color;
+    }
+
+
+/// Mixin printing a linear-gradient
+/// as well as a plain color fallback
+/// and the `-webkit-` prefixed declaration
+/// @access public
+/// @param {Keyword | Angle} $direction - Linear gradient direction
+/// @param {Arglist} $color-stops - List of color-stops composing the gradient
+@mixin linear-gradient($direction, $color-stops...) {
+    background: nth(nth($color-stops, 1), 1);
+    background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+    background: linear-gradient($direction, $color-stops);
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+  .box {
+      border: 1px solid $highlight-color;
+      width: 20px;
+
+  }
