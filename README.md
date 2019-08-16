@@ -39,7 +39,7 @@ Eet Âr (12 bøger + arrangementer)	2200,-
 
 Der afvikles min. 2 månedlige arrangementer.
 _______________________________________________________________________________________________________
-NYE BÿGER:
+NYE BØGER:
 
 Kaptajn Dinesen.
 Til døden os skiller
