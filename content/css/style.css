@@ -9,4 +9,39 @@
   border: 1px solid #20CAAE;
   width: 20px;
 }
+
+.main__tilmelding {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+}
+
+.main__tilmelding-form {
+  display: -ms-grid;
+  display: grid;
+  margin: 0 auto;
+  grid-gap: 2.5em;
+}
+
+.main__tilmelding-btn {
+  height: 3em;
+  background: transparent;
+  border-radius: 25px;
+  border: 2px solid #20CAAE;
+  color: #20CAAE;
+  width: 400px;
+  height: 40px;
+}
+
+.main__tilmelding-input {
+  border-top: transparent;
+  border-left: transparent;
+  border-bottom: 1px solid #E5E5E5E5;
+  border-right: transparent;
+  width: 250px;
+  margin: 0 auto;
+  height: 13px;
+  outline: none;
+}
 /*# sourceMappingURL=style.css.map */

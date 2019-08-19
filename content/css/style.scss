@@ -43,3 +43,38 @@ $bg-box-color: #fff;
       width: 20px;
 
   }
+
+  .main{
+    &__tilmelding{
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+    &__tilmelding-form{
+        display: grid;
+        margin: 0 auto;
+        grid-gap: 2.5em;
+    
+    }
+    &__tilmelding-btn{
+        height: 3em;
+        background: transparent;
+        border-radius: 25px;
+        border: 2px solid $highlight-color;
+        color: $highlight-color;
+        width: 400px;
+        height: 40px;
+    }
+    &__tilmelding-heading{
+
+    }
+    &__tilmelding-input{
+        border-top: transparent;
+        border-left: transparent;
+        border-bottom: 1px solid #E5E5E5E5;
+        border-right: transparent;
+        width: 250px;
+        margin: 0 auto;
+        height: 13px;
+        outline: none;
+    }
+}
