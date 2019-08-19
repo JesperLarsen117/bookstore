@@ -7,17 +7,18 @@ $bg-box-color: #fff;
 
 
 // 'Mixin for Drop Shadow on Cards'
-@mixin cardShadow($h: 2px, $v: 3px, $b:15px, $brand-color: rgba(0,0,0,.25)){
-    -webkit-box-shadow : $h $v $b $brand-color;
-    -moz-box-shadow : $h $v $b $brand-color;
-    box-shadow : $h $v $b $brand-color;
-    }
+@mixin cardShadow($h: 2px, $v: 3px, $b:15px, $brand-color: rgba(0, 0, 0, .25)) {
+    -webkit-box-shadow: $h $v $b $brand-color;
+    -moz-box-shadow: $h $v $b $brand-color;
+    box-shadow: $h $v $b $brand-color;
+}
+
 // 'Mixin for Drop Shadow on Posters'
-@mixin posterShadow($h: 2px, $v: 5px, $b:30px, $brand-color: rgba(0,0,0,.25)){
-    -webkit-box-shadow : $h $v $b $brand-color;
-    -moz-box-shadow : $h $v $b $brand-color;
-    box-shadow : $h $v $b $brand-color;
-    }
+@mixin posterShadow($h: 2px, $v: 5px, $b:30px, $brand-color: rgba(0, 0, 0, .25)) {
+    -webkit-box-shadow: $h $v $b $brand-color;
+    -moz-box-shadow: $h $v $b $brand-color;
+    box-shadow: $h $v $b $brand-color;
+}
 
 
 /// Mixin printing a linear-gradient
@@ -30,7 +31,7 @@ $bg-box-color: #fff;
     background: nth(nth($color-stops, 1), 1);
     background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
     background: linear-gradient($direction, $color-stops);
-  }
+}
 
 * {
     margin: 0;
@@ -38,8 +39,70 @@ $bg-box-color: #fff;
     box-sizing: border-box;
 }
 
-  .box {
-      border: 1px solid $highlight-color;
-      width: 20px;
+.box {
+    border: 1px solid $highlight-color;
 
-  }
+
+}
+
+body {
+    background: red;
+}
+
+
+
+.popup {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-family: sans-serif;
+    background: #fff;
+    width: 50%;
+    height: 50%;
+    margin: 15em auto;
+    padding: 1em 1em;
+
+
+
+    // display: none;
+    &__headline {
+        padding-bottom: 1em;
+        font-size: 1.4em;
+        grid-column: 1/4;
+
+    }
+
+    &__img {
+        height: 99%;
+    }
+
+    &__fig-img {
+        height: 99%;
+        grid: 2/2;
+    }
+
+    &-contact {
+        grid: 3/4;
+    }
+
+    &-contact__input {
+        font-size: 1.2em;
+        line-height: 5rem;
+        padding: 0 1em;
+        width: 100%;
+        border-width: 0 0 1px;
+        border-style: solid;
+    }
+
+    &-contact__btn {
+        margin: 1em auto;
+        font-size: 1em;
+        width: 10em;
+        height: 2em;
+        border: 0.1em solid green;
+        border-radius: 50px;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        -ms-border-radius: 50px;
+        -o-border-radius: 50px;
+}
+}

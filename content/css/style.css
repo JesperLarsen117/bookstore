@@ -7,6 +7,65 @@
 
 .box {
   border: 1px solid #20CAAE;
-  width: 20px;
+}
+
+body {
+  background: red;
+}
+
+.popup {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  font-family: sans-serif;
+  background: #fff;
+  width: 50%;
+  height: 50%;
+  margin: 15em auto;
+  padding: 1em 1em;
+}
+
+.popup__headline {
+  padding-bottom: 1em;
+  font-size: 1.4em;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
+}
+
+.popup__img {
+  height: 99%;
+}
+
+.popup__fig-img {
+  height: 99%;
+  grid: 2/2;
+}
+
+.popup-contact {
+  grid: 3/4;
+}
+
+.popup-contact__input {
+  font-size: 1.2em;
+  line-height: 5rem;
+  padding: 0 1em;
+  width: 100%;
+  border-width: 0 0 1px;
+  border-style: solid;
+}
+
+.popup-contact__btn {
+  margin: 1em auto;
+  font-size: 1em;
+  width: 10em;
+  height: 2em;
+  border: 0.1em solid green;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
 }
 /*# sourceMappingURL=style.css.map */
