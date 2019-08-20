@@ -7,18 +7,18 @@ $bg-box-color: #FFFFFF;
 
 
 // 'Mixin for Drop Shadow on Cards'
-@mixin cardShadow($h: 2px, $v: 3px, $b:15px, $brand-color: rgba(0,0,0,.25)){
-    -webkit-box-shadow : $h $v $b $brand-color;
-    -moz-box-shadow : $h $v $b $brand-color;
-    box-shadow : $h $v $b $brand-color;
-    }
-// 'Mixin for Drop Shadow on Posters'
-@mixin posterShadow($h: 2px, $v: 5px, $b:30px, $brand-color: rgba(0,0,0,.25)){
-    -webkit-box-shadow : $h $v $b $brand-color;
-    -moz-box-shadow : $h $v $b $brand-color;
-    box-shadow : $h $v $b $brand-color;
-    }
+@mixin cardShadow($h: 2px, $v: 3px, $b:15px, $brand-color: rgba(0, 0, 0, .25)) {
+    -webkit-box-shadow: $h $v $b $brand-color;
+    -moz-box-shadow: $h $v $b $brand-color;
+    box-shadow: $h $v $b $brand-color;
+}
 
+// 'Mixin for Drop Shadow on Posters'
+@mixin posterShadow($h: 2px, $v: 5px, $b:30px, $brand-color: rgba(0, 0, 0, .25)) {
+    -webkit-box-shadow: $h $v $b $brand-color;
+    -moz-box-shadow: $h $v $b $brand-color;
+    box-shadow: $h $v $b $brand-color;
+}
 
 /// Mixin printing a linear-gradient
 /// as well as a plain color fallback
@@ -30,7 +30,7 @@ $bg-box-color: #FFFFFF;
     background: nth(nth($color-stops, 1), 1);
     background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
     background: linear-gradient($direction, $color-stops);
-  }
+}
 
 * {
     margin: 0;
