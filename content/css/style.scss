@@ -179,7 +179,7 @@ body {
       }
   }
 .section {
-    height: 350px;
+    height: 550px;
     overflow: hidden;
     &__video {
         width: 100%;
@@ -192,6 +192,7 @@ body {
         margin: 20px;
         margin-top: 40px;
         &-fig {
+            @include posterShadow();
             width: 100%;
             background-color: $bg-box-color;
             img {
@@ -211,6 +212,7 @@ body {
 }
 
 .content__article {
+    @include posterShadow();
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 20px;
