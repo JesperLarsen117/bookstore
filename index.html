@@ -15,32 +15,55 @@
 
 <body>
     <header class="header">
-        <nav class="__header__nav-">
-            <ul class="header__nav-menu">
+        <section class="header__strip">
+            <ul class="header__menu">
+                <li class="header-strip-item"><a class="header__strip-dropdown" href="index.html">Gennemse kategorier <i class="fas fa-chevron-down"></i></a>
+                    <ul class="header__dropdown">
+                        <li class="header__list"><a class="header__list-link" href="#">Skøn litteratur</a></li>
+                        <li class="header__list"><a class="header__list-link" href="#">Fag litteratur</a></li>
+                        <li class="header__list"><a class="header__list-link" href="#">Børn og unge</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <img class="header__strip-logo" draggable="false" src="content/images/logo.svg" alt="boghandlerens logo">
+            <div class="header__strip-mobile-tab" id="rightMenuBtn">
+                <div class="header__strip-mobile-tab-container">
+                    <span class="header__strip-mobile-tab-container-lines"></span>
+                    <span class="header__strip-mobile-tab-container-lines"></span>
+                    <span class="header__strip-mobile-tab-container-lines"></span>
+                </div>
+                <span class="header__strip-mobile-tab-line"></span>
+                <p class="header__strip-mobile-tab-text">Menu</p>
+            </div>
+        </section>
+        <nav class="header__nav" id="rightMenu">
+                <i id="rightMenuBtnClose" class="header__nav-arrow fas fa-arrow-right"></i>
+                <img class="header__nav-logo" draggable="false" src="content/images/logo.svg" alt="boghandlerens logo">
+                <ul class="header__nav-menu">
                 <li class="header__nav-menu-item"><a href="#" class="header__nav-menu-item-link">Om Boghandleren</a>
                 </li>
-                <li class="header__nav-menu-item"><a href="#" class="header__nav-menu-item-link">Bogklubben</a>
-                    <ul class="header__nav-menu-item-dropdown">
-                        <li class="header__nav-menu-item-dropwdown-item"><a href="#" class="header__nav-menu-item-dropdown-item-link">Nyheder</a></li>
-                        <li class="header__nav-menu-item-dropwdown-item"><a href="#" class="header__nav-menu-item-dropdown-item-link">Arragementer</a></li>
-                        <li class="header__nav-menu-item-dropwdown-item"><a href="#" class="header__nav-menu-item-dropdown-item-link">Månedens bog</a></li>
-                        <li class="header__nav-menu-item-dropwdown-item"><a href="#" class="header__nav-menu-item-dropdown-item-link">Bog tips</a></li>
-                    </ul>
+                <li class="header__nav-menu-item"><a href="#" class="header__nav-menu-item-link">Bogklubben<i class="fas fa-chevron-down"></i></a>
+                <ul class="header__nav-menu-item-dropdown">
+                    <li class="header__nav-menu-item-dropdown-item"><a href="#" class="header__nav-menu-item-dropdown-item-link">Nyheder</a></li>
+                    <li class="header__nav-menu-item-dropdown-item"><a href="#" class="header__nav-menu-item-dropdown-item-link">Arragementer</a></li>
+                    <li class="header__nav-menu-item-dropdown-item"><a href="#" class="header__nav-menu-item-dropdown-item-link">Månedens bog</a></li>
+                    <li class="header__nav-menu-item-dropdown-item"><a href="#" class="header__nav-menu-item-dropdown-item-link">Bog tips</a></li>
+                </ul>
                 </li>
-                <li class="header__nav-menu-item"><a href="#" class="header__nav-menu-item-link">Akutuelt</a>
-                    <ul class="header__nav-menu-item-dropdown">
-                        <li class="header__nav-menu-item-dropwdown-item"><a href="#" class="header__nav-menu-item-dropdown-item-link">Skøn litteratur</a></li>
-                        <li class="header__nav-menu-item-dropwdown-item"><a href="#" class="header__nav-menu-item-dropdown-item-link">Fag litteratur</a></li>
-                        <li class="header__nav-menu-item-dropwdown-item"><a href="#" class="header__nav-menu-item-dropdown-item-link">Børn og unge</a></li>
-                    </ul>
+                <li class="header__nav-menu-item"><a href="#" class="header__nav-menu-item-link">Akutuelt <i class="fas fa-chevron-down"></i></a>
+                <ul class="header__nav-menu-item-dropdown">
+                    <li class="header__nav-menu-item-dropdown-item"><a href="#" class="header__nav-menu-item-dropdown-item-link">Skøn litteratur</a></li>
+                    <li class="header__nav-menu-item-dropdown-item"><a href="#" class="header__nav-menu-item-dropdown-item-link">Fag litteratur</a></li>
+                    <li class="header__nav-menu-item-dropdown-item"><a href="#" class="header__nav-menu-item-dropdown-item-link">Børn og unge</a></li>
+                </ul>
                 </li>
                 <li class="header__nav-menu-item"><a href="#" class="header__nav-menu-item-link">Tilmelding</a>
 
                 </li>
-                <li class="header__nav-menu-item"><a href="#" class="header__nav-menu-item-link">Lånebørsen</a>
-                    <ul class="header__nav-menu-item-dropdown">
-                        <li class="header__nav-menu-item-dropwdown-item"><a href="#" class="header__nav-menu-item-dropdown-item-link">Kontakt</a></li>
-                    </ul>
+                <li class="header__nav-menu-item"><a href="#" class="header__nav-menu-item-link">Lånebørsen <i class="fas fa-chevron-down"></i></a>
+                <ul class="header__nav-menu-item-dropdown">
+                    <li class="header__nav-menu-item-dropdown-item"><a href="#" class="header__nav-menu-item-dropdown-item-link">Kontakt</a></li>
+                </ul>
                 </li>
 
             </ul>
@@ -108,6 +131,7 @@
 
 
     <!-- Font Awesome Icon Script  -->
+    <script src="content/js/main.js"></script>
     <script src="https://kit.fontawesome.com/3ae7ff667f.js "></script>
 </body>
 
