@@ -191,12 +191,14 @@
                 left: 50%;
                 top: 50%;
                 font-size: 4em;
+                font-family: 'Josefin Sans', sans-serif;
+                text-shadow: 1px 1px #949090;
             }
             &__article {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 grid-gap: 40px;
-                height: 1000px;
+                height: 1050px;
                 margin: 20px;
                 margin-top: 40px;
                 &-fig {
@@ -206,17 +208,31 @@
                     img {
                         width: 100%;
                         object-fit: cover;
+                        border-bottom: 1px solid lightgray;
                     }
                     &-figcap {
                         width: 100%;
                         padding: 15px;
                         color: $font-color;
+                        a {
+                            float: right;
+                            text-decoration: none;
+                            margin-top: 50px;
+                            color: black;
+                        }
                         h3 {
                             margin-bottom: 15px;
                         }
                     }
                 }
             }
+        }
+        
+        .section__article-bottem img {
+            height: 340px;
+            margin-top: 100px;
+            border-bottom: unset;
+            border-btop: 1px solid lightgray;
         }
         
         .content__article {
@@ -240,6 +256,7 @@
             img {
                 width: 100%;
                 height: 280px;
+                border: 1px solid lightgray;
             }
         }
         
@@ -249,20 +266,19 @@
             height: 70px;
             background-color: $highlight-color;
             text-align: center;
-            font-size: 1.2em;
-            font-weight: 50;
+            font-size: 1em;
             margin-top: 80px;
+            padding: 25px;
             a {
                 text-decoration: none;
                 color: white;
-                display: inline-block;
                 padding: 1em;
             }
             &-button:last-child {
                 border: unset;
             }
             &-button {
-                border-right: 2px solid rgb(159, 154, 154);
+                border-right: 1px solid gray;
             }
         }
         
@@ -270,7 +286,7 @@
             background-color: white;
             &__text {
                 text-align: center;
-                font-size: 1.4em;
+                font-size: 1.2em;
                 height: 60px;
                 margin-top: 25px;
                 p {
