@@ -1,232 +1,280 @@
-$font-color: #414141;
-$font-color2: #EEEEEE;
-$highlight-color: #20CAAE;
-$bg-color: #E5E5E5;
-$bg-box-color: #FFFFFF;
-
-
-
-// 'Mixin for Drop Shadow on Cards'
-@mixin cardShadow($h: 2px, $v: 3px, $b:15px, $brand-color: rgba(0, 0, 0, .25)) {
-    -webkit-box-shadow: $h $v $b $brand-color;
-    -moz-box-shadow: $h $v $b $brand-color;
-    box-shadow: $h $v $b $brand-color;
-}
-
-// 'Mixin for Drop Shadow on Posters'
-@mixin posterShadow($h: 2px, $v: 5px, $b:30px, $brand-color: rgba(0, 0, 0, .25)) {
-    -webkit-box-shadow: $h $v $b $brand-color;
-    -moz-box-shadow: $h $v $b $brand-color;
-    box-shadow: $h $v $b $brand-color;
-}
-
-/// Mixin printing a linear-gradient
-/// as well as a plain color fallback
-/// and the `-webkit-` prefixed declaration
-/// @access public
-/// @param {Keyword | Angle} $direction - Linear gradient direction
-/// @param {Arglist} $color-stops - List of color-stops composing the gradient
-@mixin linear-gradient($direction, $color-stops...) {
-    background: nth(nth($color-stops, 1), 1);
-    background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
-    background: linear-gradient($direction, $color-stops);
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background-color: $bg-color;
-    overflow-x: hidden; 
-}
-  .header {
-      &__strip {
-          width: 100%;
-          background-color: $bg-box-color;
-          display: grid;
-          grid-template-columns: 20% 1fr 20%;
-        &-dropdown {
-            color: $font-color;
-            text-decoration: none;
-            align-self: center;
-            justify-self: center;
+        $font-color: #414141;
+        $font-color2: #EEEEEE;
+        $highlight-color: #20CAAE;
+        $bg-color: #E5E5E5;
+        $bg-box-color: #FFFFFF;
+        // 'Mixin for Drop Shadow on Cards'
+        @mixin cardShadow($h: 2px, $v: 3px, $b:15px, $brand-color: rgba(0, 0, 0, .25)) {
+            -webkit-box-shadow: $h $v $b $brand-color;
+            -moz-box-shadow: $h $v $b $brand-color;
+            box-shadow: $h $v $b $brand-color;
         }
-        &-logo {
-            width: 120px;
-            justify-self: center;
+        
+        // 'Mixin for Drop Shadow on Posters'
+        @mixin posterShadow($h: 2px, $v: 5px, $b:30px, $brand-color: rgba(0, 0, 0, .25)) {
+            -webkit-box-shadow: $h $v $b $brand-color;
+            -moz-box-shadow: $h $v $b $brand-color;
+            box-shadow: $h $v $b $brand-color;
         }
-        &-mobile-tab {
+        
+        /// Mixin printing a linear-gradient
+        /// as well as a plain color fallback
+        /// and the `-webkit-` prefixed declaration
+        /// @access public
+        /// @param {Keyword | Angle} $direction - Linear gradient direction
+        /// @param {Arglist} $color-stops - List of color-stops composing the gradient
+        @mixin linear-gradient($direction, $color-stops...) {
+            background: nth(nth($color-stops, 1), 1);
+            background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+            background: linear-gradient($direction, $color-stops);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        body {
+            background-color: $bg-color;
+            overflow-x: hidden;
+        }
+        
+        .header {
+            &__strip {
+                width: 100%;
+                background-color: $bg-box-color;
+                display: grid;
+                grid-template-columns: 20% 1fr 20%;
+                &-dropdown {
+                    color: $font-color;
+                    text-decoration: none;
+                    align-self: center;
+                    justify-self: center;
+                }
+                &-logo {
+                    width: 120px;
+                    justify-self: center;
+                }
+                &-mobile-tab {
+                    display: flex;
+                    align-self: center;
+                    align-items: center;
+                    justify-self: center;
+                    cursor: pointer;
+                    &-container {
+                        display: inline-block;
+                        transform: rotateY(180deg);
+                        &-lines {
+                            display: block;
+                            height: 2px;
+                            margin: 0.2em 0;
+                            background-color: $font-color;
+                            &:nth-child(1) {
+                                width: 20px;
+                            }
+                            &:nth-child(2) {
+                                width: 10px;
+                            }
+                            &:nth-child(3) {
+                                width: 15px;
+                            }
+                        }
+                    }
+                    &-line {
+                        display: inline-block;
+                        height: 30px;
+                        width: 2px;
+                        margin: 0 1em;
+                        background-color: $font-color;
+                    }
+                    &-text {
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+        
+        .header__menu {
             display: flex;
-            align-self: center;
             align-items: center;
-            justify-self: center;
-            cursor: pointer;
-            &-container {
+            justify-content: center;
+            .header-strip-item {
+                position: relative;
                 display: inline-block;
-                transform: rotateY(180deg);
-                &-lines {
+                &:hover .header__list {
                     display: block;
-                    height: 2px;
-                    margin: 0.2em 0;
-                    background-color: $font-color;
-                    &:nth-child(1) {
-                        width: 20px;
-                    }
-                    &:nth-child(2) {
-                        width: 10px;
-                    }
-                    &:nth-child(3) {
-                        width: 15px;
+                }
+            }
+            .header__dropdown {
+                position: absolute;
+                left: 0;
+                right: 0;
+                background-color: $bg-box-color;
+                padding: 0 1em;
+                .header__list {
+                    padding: 1.8em 0;
+                    // text-align: center;
+                    display: none;
+                    .header__list-link {
+                        text-decoration: none;
+                        color: $font-color;
                     }
                 }
             }
-            &-line {
-                display: inline-block;
-                height: 30px;
-                width: 2px;
-                margin: 0 1em;
-                background-color: $font-color;
-            }
-            &-text {
-                display: inline-block;
-            }
         }
-      }
-  }
-
-  .header__menu {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-      .header-strip-item {
-            position: relative;
-            display: inline-block;
-        &:hover .header__list{
-            display: block;
-        }
-      }
-    .header__dropdown {
-        position: absolute;
-        left: 0;
-        right: 0;
-        background-color: $bg-box-color;
-        padding: 0  1em;
-        .header__list {
-            padding: 1.8em 0;
-            // text-align: center;
-            display: none;
-            .header__list-link {
-                text-decoration: none;
-                color: $font-color;
+        
+        .header__nav {
+            transform: translateX(100%);
+            transition: transform 200ms ease-in-out;
+            width: 20%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            background-color: $bg-box-color;
+            height: 100%;
+            &-arrow {
+                display: block;
+                margin: 1em;
+                padding: 1em;
+                cursor: pointer;
             }
-        }
-    }
-  }
-
-  .header__nav {
-      transform: translateX(100%);
-      transition: transform 200ms ease-in-out;
-      width: 20%;
-      position: absolute;
-      right: 0;
-      top: 0;
-      background-color: $bg-box-color;
-      height: 100%;
-      &-arrow {
-          display: block;
-          margin: 1em;
-          padding: 1em;
-          cursor: pointer;
-      }
-      &-logo {
-          display: block;
-          width: 120px;
-          margin: 2em auto;
-      }
-      &-menu {
-          margin-top: 2em;
-          &-item {
-              list-style-type: none;
-              padding: 1em 0;
-              text-align: center;
-              &:nth-child(even) {
-              }
-                :hover > &-dropdown{
-                    display: block;
-                }
-              &-link {
-                  color: $font-color;
-                  text-decoration: none;
-
-              }
-              &-dropdown {
-                display: none;
+            &-logo {
+                display: block;
+                width: 120px;
+                margin: 2em auto;
+            }
+            &-menu {
+                margin-top: 2em;
                 &-item {
                     list-style-type: none;
                     padding: 1em 0;
                     text-align: center;
-                    background-color: #ececec;
+                     :hover>&-dropdown {
+                        display: block;
+                    }
                     &-link {
                         color: $font-color;
                         text-decoration: none;
                     }
+                    &-dropdown {
+                        display: none;
+                        &-item {
+                            list-style-type: none;
+                            padding: 1em 0;
+                            text-align: center;
+                            background-color: #ececec;
+                            &-link {
+                                color: $font-color;
+                                text-decoration: none;
+                            }
+                        }
+                    }
                 }
-              }
-          }
-      }
-  }
-.section {
-    height: 550px;
-    overflow: hidden;
-    &__video {
-        width: 100%;
-    }
-    &__article {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 40px;
-        height: 800px;
-        margin: 20px;
-        margin-top: 40px;
-        &-fig {
-            @include posterShadow();
-            width: 100%;
-            background-color: $bg-box-color;
-            img {
-                width: 100%;
-                object-fit: cover;
             }
+        }
+        
+        .section {
+            height: 550px;
+            overflow: hidden;
+            position: relative;
+            &__video {
+                width: 100%;
+            }
+            h1 {
+                position: absolute;
+                color: white;
+                top: 0;
+                z-index: 80;
+                transform: translate(-50%, -50%);
+                left: 50%;
+                top: 50%;
+                font-size: 4em;
+            }
+            &__article {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 40px;
+                height: 1000px;
+                margin: 20px;
+                margin-top: 40px;
+                &-fig {
+                    @include posterShadow();
+                    width: 100%;
+                    background-color: $bg-box-color;
+                    img {
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                    &-figcap {
+                        width: 100%;
+                        padding: 15px;
+                        color: $font-color;
+                        h3 {
+                            margin-bottom: 15px;
+                        }
+                    }
+                }
+            }
+        }
+        
+        .content__article {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            height: 280px;
+            overflow: hidden;
+            margin: 20px;
+            margin-top: 40px;
+            @include posterShadow;
             &-figcap {
                 width: 100%;
-                padding: 15px;
+                padding: 30px;
+                background-color: $bg-box-color;
                 color: $font-color;
+                line-height: 20px;
                 h3 {
-                    margin: 15px;
+                    margin-bottom: 15px;
+                }
+            }
+            img {
+                width: 100%;
+                height: 280px;
+            }
+        }
+        
+        .footer__content {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            height: 70px;
+            background-color: $highlight-color;
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: 50;
+            margin-top: 80px;
+            a {
+                text-decoration: none;
+                color: white;
+                display: inline-block;
+                padding: 1em;
+            }
+            &-button:last-child {
+                border: unset;
+            }
+            &-button {
+                border-right: 2px solid rgb(159, 154, 154);
+            }
+        }
+        
+        .footer {
+            background-color: white;
+            &__text {
+                text-align: center;
+                font-size: 1.4em;
+                height: 60px;
+                margin-top: 25px;
+                p {
+                    color: $font-color;
                 }
             }
         }
-    }
-}
-
-.content__article {
-    @include posterShadow();
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 20px;
-    margin-top: 40px;
-    &-figcap {
-        width: 100%;
-        padding: 30px;
-        background-color: $bg-box-color;
-        color: $font-color;
-        h3 {
-            margin: 15px;
-        }
-    }
-    img {
-        width: 100%;
-    }
-}
