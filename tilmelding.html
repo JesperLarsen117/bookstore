@@ -8,8 +8,9 @@
     <meta name="description" content="Boghandleren">
     
     <!-- Stylesheets -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="content/css/style.css">
-    <title>Boghandleren</title>
+    <title>Tilmelding</title>
 </head>
 <body>
     <header>
@@ -20,12 +21,12 @@
     <section class="main__tilmelding">
         <form action="" class="main__tilmelding-form">
             <h2 class="main__form-heading">Tilmeld klub Boghandleren</h2>
-            <input type="text" name="Fulde navn" id="" class="main__tilmelding-input" placeholder="Fulde Navn">
-            <input type="text" name="Adresse" id="" class="main__tilmelding-input" placeholder="Adresse">
-            <input type="text" name="By" id="" class="main__tilmelding-input" placeholder="By">
-            <input type="number" name="Post nr." id="" class="main__tilmelding-input" placeholder="Post Nr.">
-            <input type="email" name="E-mail" id="" class="main__tilmelding-input" placeholder="E-Mail">
-            <button class="main__tilmelding-btn">Book</button>
+            <input type="text" name="fuldenavn" id="name" class="main__tilmelding-input" placeholder="Fulde Navn">
+            <input type="text" name="adresse" id="address" class="main__tilmelding-input" placeholder="Adresse">
+            <input type="text" name="by" id="city" class="main__tilmelding-input" placeholder="By">
+            <input type="text" maxlength="4" name="post" id="post" class="main__tilmelding-input" placeholder="Post Nr.">
+            <input type="email" name="email" id="email" class="main__tilmelding-input" placeholder="E-Mail">
+            <button type="button" id="submit" class="main__tilmelding-btn">Book</button>
         </form>
         <figure class="main__tilmelding-fig">
             <img src="content/images/Books_01.jpg" alt="" srcset="" class="main__tilmelding-img">
@@ -35,5 +36,6 @@
 </main>
     <!-- Font Awesome Icon Script  -->
     <script src="https://kit.fontawesome.com/3ae7ff667f.js"></script>
+    <script src="content/js/formvalidering.js"></script>
 </body>
 </html>

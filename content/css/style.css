@@ -3,6 +3,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: 'Monsterrat', sans-serif;
 }
 
 .box {
@@ -10,11 +11,27 @@
   width: 20px;
 }
 
+body {
+  background-color: #E5E5E5;
+}
+
 .main__tilmelding {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 50% 50%;
-      grid-template-columns: 50% 50%;
+  -ms-grid-columns: 50% auto;
+      grid-template-columns: 50% auto;
+  background-color: #fff;
+  width: 80%;
+  margin: 0 auto;
+  -webkit-box-shadow: 2px 5px 30px rgba(0, 0, 0, 0.25);
+  box-shadow: 2px 5px 30px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 1200px) {
+  .main__tilmelding {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
 }
 
 .main__tilmelding-form {
@@ -34,6 +51,24 @@
   height: 40px;
 }
 
+@media (max-width: 1200px) {
+  .main__tilmelding-btn {
+    width: 40vw;
+  }
+}
+
+@media (max-width: 992px) {
+  .main__tilmelding-btn {
+    width: 40vw;
+  }
+}
+
+@media (max-width: 767px) {
+  .main__tilmelding-btn {
+    width: 40vw;
+  }
+}
+
 .main__tilmelding-input {
   border-top: transparent;
   border-left: transparent;
@@ -41,7 +76,21 @@
   border-right: transparent;
   width: 250px;
   margin: 0 auto;
-  height: 13px;
+  height: 20px;
   outline: none;
+  font-size: 1em;
+}
+
+.main__tilmelding-img {
+  display: block;
+  width: 100%;
+}
+
+@media (max-width: 1200px) {
+  .main__tilmelding-img {
+    width: 100%;
+    height: 500px;
+    margin-top: 5em;
+  }
 }
 /*# sourceMappingURL=style.css.map */
