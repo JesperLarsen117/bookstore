@@ -30,44 +30,6 @@ $bg-box-color: #fff;
       + "Available breakpoints are: #{map-keys($breakpoints)}.";
 }
 }
-    
-
-// MAX HEIGHT MIXIN
-
-$hoppoints: (
-    'mobile': 767px,
-    'tablet': 992px,
-    'desktop': 1200px,
-    )!default;
-
-/// @require $hoppoints
-@mixin hoppoint($hoppoint) {
-    // If the key exists in the map
-    @if map-has-key($hoppoints, $hoppoint) {
-      // Prints a media query based on the value
-      @media (max-width: map-get($hoppoints, $hoppoint)) {
-        @content;
-      }
-    }
-    
-    // If the key doesn't exist in the map
-    @else {
-      @warn "Unfortunately, no value could be retrieved from `#{$hoppoint}`. "
-          + "Available hoppoints are: #{map-keys($hoppoints)}.";
-    }
-    }
-
-
-
-// MIXIN END
-
-
-
-
-
-
-
-
 
 
 
@@ -266,7 +228,7 @@ body {
         width: 80%; 
         margin: 0 auto;
         @include posterShadow();
-        @include hoppoint(desktop){
+        @include breakpoint(desktop){
             grid-template-columns: 50% auto;
         }
     }
@@ -283,7 +245,7 @@ body {
         color: $highlight-color;
         width: 400px;
         height: 40px;
-        @include hoppoint(large){
+        @include breakpoint(large){
             width: 40vw;
         }
         @include breakpoint(tablet){
@@ -292,9 +254,6 @@ body {
         @include breakpoint(mobile){
             width: 40vw;
         }
-    }
-    &__tilmelding-heading{
-
     }
     &__tilmelding-input{
         border-top: transparent;
@@ -306,9 +265,6 @@ body {
         height: 20px;
         outline: none;
         font-size: 1em;
-    }
-    &__tilmelding-fig{
-
     }
     &__tilmelding-img{
         display: block;
