@@ -42,20 +42,16 @@ body {
     background: #E5E5E5;
 }
 
-
-
 .popup {
     display: grid;
     grid-template-columns: 1fr 1fr;
-
     background: #fff;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 50%;
-    height: 50%;
-    margin: 15em auto;
-    padding: 1em 1em;
-
-
-
+  
     // display: none;
     &__headline {
         padding-bottom: 1em;
@@ -66,39 +62,40 @@ body {
     }
 
     &__img {
-        height: 99%;
-        margin: 0 auto;
+        margin: 1em 1em;
      
     }
 
     &__fig-img {
-        display: block;
-        height: 90%;
-        width: auto;
-        grid: 2/2;
+        display: inline-block;
+    grid: 2/2;
+    margin: 1em 1em;
+    width: 20vw;
     }
 
     &-contact {
+       width: 20vw;
         grid: 3/4;
     }
 
     &-contact__input {
+        display: inline-block;
         font-size: 1.2em;
-        line-height: 3rem;
-        padding: 0 1em;
-        width: 100%;
+        line-height: 2rem;
+        padding: 0.5em 1em;
+        width: 99%;
         border-width: 0 0 1px;
         border-style: solid;
     }
 
     &-contact__label {
-        font-size: 2em;
+        font-size: 1em;
         font-style: normal;
     }
 
     &-contact__btn {
         grid-column: 1/2;
-        margin: 0 auto;
+        margin: 1em auto;
         font-size: 1em;
         width: 10em;
         height: 2em;
