@@ -39,7 +39,7 @@ $bg-box-color: #fff;
 }
 
 body {
-    background: red;
+    background: #E5E5E5;
 }
 
 
@@ -61,15 +61,20 @@ body {
         padding-bottom: 1em;
         font-size: 1.4em;
         grid-column: 1/4;
+        justify-self: center;
 
     }
 
     &__img {
         height: 99%;
+        margin: 0 auto;
+     
     }
 
     &__fig-img {
-        height: 99%;
+        display: block;
+        height: 90%;
+        width: auto;
         grid: 2/2;
     }
 
@@ -79,15 +84,21 @@ body {
 
     &-contact__input {
         font-size: 1.2em;
-        line-height: 5rem;
+        line-height: 3rem;
         padding: 0 1em;
         width: 100%;
         border-width: 0 0 1px;
         border-style: solid;
     }
 
+    &-contact__label {
+        font-size: 2em;
+        font-style: normal;
+    }
+
     &-contact__btn {
-        margin: 1em auto;
+        grid-column: 1/2;
+        margin: 0 auto;
         font-size: 1em;
         width: 10em;
         height: 2em;
@@ -97,4 +108,6 @@ body {
         -moz-border-radius: 50px;
         -ms-border-radius: 50px;
         -o-border-radius: 50px;
+
+    }
 }

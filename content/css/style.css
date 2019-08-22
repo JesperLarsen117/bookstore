@@ -5,12 +5,8 @@
           box-sizing: border-box;
 }
 
-.box {
-  border: 1px solid #20CAAE;
-}
-
 body {
-  background: red;
+  background: #E5E5E5;
 }
 
 .popup {
@@ -18,7 +14,6 @@ body {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  font-family: sans-serif;
   background: #fff;
   width: 50%;
   height: 50%;
@@ -32,14 +27,19 @@ body {
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-column: 1/4;
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 
 .popup__img {
   height: 99%;
+  margin: 0 auto;
 }
 
 .popup__fig-img {
-  height: 99%;
+  display: block;
+  height: 90%;
+  width: auto;
   grid: 2/2;
 }
 
@@ -49,15 +49,23 @@ body {
 
 .popup-contact__input {
   font-size: 1.2em;
-  line-height: 5rem;
+  line-height: 3rem;
   padding: 0 1em;
   width: 100%;
   border-width: 0 0 1px;
   border-style: solid;
 }
 
+.popup-contact__label {
+  font-size: 2em;
+  font-style: normal;
+}
+
 .popup-contact__btn {
-  margin: 1em auto;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  margin: 0 auto;
   font-size: 1em;
   width: 10em;
   height: 2em;
