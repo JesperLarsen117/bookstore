@@ -434,7 +434,7 @@ body {
 }
 
 .main {
-  margin: 5em auto 0 auto;
+  margin: 10em auto 0 auto;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 20% 1fr;
