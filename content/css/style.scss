@@ -30,6 +30,47 @@ $bg-box-color: #fff;
       + "Available breakpoints are: #{map-keys($breakpoints)}.";
 }
 }
+    
+
+// MAX HEIGHT MIXIN
+
+$hoppoints: (
+    'mobile': 767px,
+    'tablet': 992px,
+    'desktop': 1200px,
+    )!default;
+
+/// @require $hoppoints
+@mixin hoppoint($hoppoint) {
+    // If the key exists in the map
+    @if map-has-key($hoppoints, $hoppoint) {
+      // Prints a media query based on the value
+      @media (max-width: map-get($hoppoints, $hoppoint)) {
+        @content;
+      }
+    }
+    
+    // If the key doesn't exist in the map
+    @else {
+      @warn "Unfortunately, no value could be retrieved from `#{$hoppoint}`. "
+          + "Available hoppoints are: #{map-keys($hoppoints)}.";
+    }
+    }
+
+
+
+// MIXIN END
+
+
+
+
+
+
+
+
+
+
+
 
 // 'Mixin for Drop Shadow on Cards'
 @mixin cardShadow($h: 2px, $v: 3px, $b:15px, $brand-color: rgba(0, 0, 0, .25)) {
@@ -217,6 +258,72 @@ body {
 
 
 // NAV BAR END
+//TILMELDING START
+.main {
+    &__tilmelding{
+        display: grid;
+        grid-template-columns: 1fr;
+        background-color: #fff;
+        width: 80%; 
+        margin: 0 auto;
+        @include posterShadow();
+        @include hoppoint(desktop){
+            grid-template-columns: 50% auto;
+        }
+    }
+    &__tilmelding-form{
+        display: grid;
+        margin: 0 auto;
+        grid-gap: 2.5em;
+    }
+    &__tilmelding-btn{
+        height: 3em;
+        background: transparent;
+        border-radius: 25px;
+        border: 2px solid $highlight-color;
+        color: $highlight-color;
+        width: 400px;
+        height: 40px;
+        @include hoppoint(large){
+            width: 40vw;
+        }
+        @include breakpoint(tablet){
+            width: 40vw;
+        }
+        @include breakpoint(mobile){
+            width: 40vw;
+        }
+    }
+    &__tilmelding-heading{
+
+    }
+    &__tilmelding-input{
+        border-top: transparent;
+        border-left: transparent;
+        border-bottom: 1px solid #E5E5E5E5;
+        border-right: transparent;
+        width: 250px;
+        margin: 0 auto;
+        height: 20px;
+        outline: none;
+        font-size: 1em;
+    }
+    &__tilmelding-fig{
+
+    }
+    &__tilmelding-img{
+        // margin-top: 3em;
+        display: block;
+        @include breakpoint(large){
+            width: 100%;
+            height: 500px;
+            margin-top: 5em;
+        }
+        width: 100%;
+    }
+}
+
+// TILMELDING SLUT
 
 .container-about, .container-contact, .mail {
     display: grid;
@@ -295,7 +402,7 @@ body {
 
     &__text-days,  &__text-cdays, &__text-ctimes, &__text-times,  &__text-info, .container-contact__headings {
         list-style: none;
-        margin: .4em .2em;
+        margin: .4em 1.2em;
         @include breakpoint(desktop) {
             margin: .8em 2em;
         }
@@ -338,23 +445,37 @@ body {
 // FOOTER START
 .footer__content {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    height: 70px;
+    grid-template-columns: 1fr;
+    height: 165px;
     background-color: $highlight-color;
     text-align: center;
     font-size: 1em;
     margin-top: 80px;
     padding: 25px;
+    @include breakpoint(mobile) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        height: 70px;
+    }
     a {
         text-decoration: none;
         color: white;
         padding: 1em;
+        transition: all 200ms ease-in-out;
+        &:hover {
+            color: $font-color;
+        }
     }
     &-button:last-child {
-        border: unset;
+        @include breakpoint(mobile) {
+            border: unset;
+        }
     }
     &-button {
         border-right: 1px solid white;
+        border-left: 1px solid white;
+        @include breakpoint(mobile) {
+            border-left: unset;
+        }
     }
 }
 
