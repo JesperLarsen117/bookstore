@@ -398,7 +398,24 @@ body {
     // width: 90%;
     display: grid;
     grid-template-columns: 20% 1fr;
-
+    &__best-books {
+        text-align: center;
+    }
+    &__best-container {
+        text-align: center;
+    }
+    &__best-text {
+        margin: 2em 0 0.2em 0;
+    }
+    &__best-fig {
+        text-align: center;
+        width: 100%;
+    }
+    &__best-img {
+        width: 70%;
+        cursor: pointer;
+        @include posterShadow();
+    }
     &__link {
         display: inline-block;
         margin: 0 1em;
@@ -433,17 +450,21 @@ body {
         background-color: $bg-box-color;
         width: 40%;
         height: 400px;
+        @include cardShadow();
         transition: visibility 0s 200ms, opacity 200ms linear, width 400ms;
     }
     &__fig {
         position: absolute;
         top: 50%;
-        left: -2em;;
+        left: -3em;;
         transform: translateY(-50%);
         width: 30%;
+        @include posterShadow();
+
     }
     &__img {
         width: 100%;
+        display: block;
     }
     &__info-container {
         position: absolute;

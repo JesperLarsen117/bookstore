@@ -67,16 +67,15 @@ const unge = document.getElementsByClassName("unge");
 
 fagBtn.onclick = () => {
     for (let i = 0; i < skoen.length; i++) {
-        skoen[i].style.visibility = "hidden";
         skoen[i].style.opacity = "0";
         skoen[i].style.width = "0";
         skoen[i].style.margin = "0";
         setInterval(() => {
             skoen[i].style.display = "none";
         }, 400);
+        
     }
     for (let i = 0; i < unge.length; i++) {
-        unge[i].style.visibility = "hidden";
         unge[i].style.opacity = "0";
         unge[i].style.width = "0";
         unge[i].style.margin = "0";
@@ -85,7 +84,6 @@ fagBtn.onclick = () => {
         }, 400);
     }
     for (let i = 0; i < fag.length; i++) {
-        fag[i].style.visibility = "visible";
         fag[i].style.opacity = "1";
         fag[i].style.width = "40%";
         fag[i].style.margin = "2em";
@@ -96,7 +94,6 @@ fagBtn.onclick = () => {
 skoenBtn.onclick = () => {
 
     for (let i = 0; i < fag.length; i++) {
-        fag[i].style.visibility = "hidden";
         fag[i].style.opacity = "0";
         fag[i].style.width = "0";
         fag[i].style.margin = "0";
@@ -105,7 +102,6 @@ skoenBtn.onclick = () => {
         }, 400);
     }
     for (let i = 0; i < unge.length; i++) {
-        unge[i].style.visibility = "hidden";
         unge[i].style.opacity = "0";
         unge[i].style.width = "0";
         unge[i].style.margin = "0";
@@ -114,7 +110,6 @@ skoenBtn.onclick = () => {
         }, 400);
     }
     for (let i = 0; i < skoen.length; i++) {
-        skoen[i].style.visibility = "visible";
         skoen[i].style.opacity = "1";
         skoen[i].style.width = "40%";
         skoen[i].style.margin = "2em";
@@ -123,7 +118,6 @@ skoenBtn.onclick = () => {
 }
 ungeBtn.onclick = () => {
     for (let i = 0; i < fag.length; i++) {
-        fag[i].style.visibility = "hidden";
         fag[i].style.opacity = "0";
         fag[i].style.width = "0";
         fag[i].style.margin = "0";
@@ -132,7 +126,6 @@ ungeBtn.onclick = () => {
         }, 400);
     }
     for (let i = 0; i < skoen.length; i++) {
-        skoen[i].style.visibility = "hidden";
         skoen[i].style.opacity = "0";
         skoen[i].style.width = "0";
         skoen[i].style.margin = "0";
@@ -141,7 +134,6 @@ ungeBtn.onclick = () => {
         }, 400);
     }
     for (let i = 0; i < unge.length; i++) {
-        unge[i].style.visibility = "visible";
         unge[i].style.opacity = "1";
         unge[i].style.width = "40%";
         unge[i].style.margin = "2em";
