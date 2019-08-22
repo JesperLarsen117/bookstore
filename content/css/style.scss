@@ -4,7 +4,31 @@ $highlight-color: #20CAAE;
 $bg-color: #E5E5E5;
 $bg-box-color: #FFFFFF;
 
+/// Mixin to manage responsive breakpoints
+$breakpoints: (
+    'mobile': 767px,
+    'tablet': 992px,
+    'desktop': 1200px,
+    )!default;
 
+/// @author Hugo Giraudel
+/// @param {String} $breakpoint - Breakpoint name
+/// @require $breakpoints
+@mixin breakpoint($breakpoint) {
+// If the key exists in the map
+@if map-has-key($breakpoints, $breakpoint) {
+  // Prints a media query based on the value
+  @media (min-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+// If the key doesn't exist in the map
+@else {
+  @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+      + "Available breakpoints are: #{map-keys($breakpoints)}.";
+}
+}
 
 // 'Mixin for Drop Shadow on Cards'
 @mixin cardShadow($h: 2px, $v: 3px, $b:15px, $brand-color: rgba(0, 0, 0, .25)) {
@@ -186,15 +210,16 @@ body {
               list-style-type: none;
               padding: 1em 0;
               text-align: center;
-              &:nth-child(even) {
-              }
                 :hover > &-dropdown{
                     display: block;
                 }
               &-link {
                   color: $font-color;
                   text-decoration: none;
-
+              }
+            }
+        }
+    }
 .header__nav {
     transform: translateX(100%);
     transition: transform 200ms ease-in-out;
@@ -359,8 +384,45 @@ body {
     }
 }
 
+// FOOTER START
+.footer__content {
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 165px;
+    background-color: $highlight-color;
+    text-align: center;
+    font-size: 1em;
+    margin-top: 80px;
+    padding: 25px;
+    @include breakpoint(mobile) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        height: 70px;
+    }
+    a {
+        text-decoration: none;
+        color: white;
+        padding: 1em;
+        transition: all 200ms ease-in-out;
+        &:hover {
+            color: $font-color;
+        }
+    }
+    &-button:last-child {
+        @include breakpoint(mobile) {
+            border: unset;
+        }
+    }
+    &-button {
+        border-right: 1px solid white;
+        border-left: 1px solid white;
+        @include breakpoint(mobile) {
+            border-left: unset;
+        }
+    }
+}
+
 .footer {
-    background-color: $bg-box-color;
+    background-color: white;
     &__text {
         text-align: center;
         font-size: 1.2em;
@@ -371,6 +433,8 @@ body {
         }
     }
 }
+
+// FOOTER END
 
 // Media queries 768px
 .section__article {
@@ -393,13 +457,6 @@ body {
 .section {
     @media (max-width: 768px) {
         height: 300px;
-    }
-}
-
-.footer {
-    @media (max-width: 768px) {
-        font-size: 0.7em;
-        margin-top: 50px;
     }
 }
 
@@ -648,8 +705,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 50%;
-  
+    width: 50%;  
     // display: none;
     &__headline {
         padding: 1em 0;
@@ -711,6 +767,7 @@ body {
         bottom: 0;
         background-color: rgba(0, 0, 0, 0.705);
         z-index: 1002;
+        display: none;
     }
     &__close {
         position: absolute;
@@ -877,13 +934,6 @@ body {
 .section__article-fig-second {
     @media (max-width: 450px) {
         height: 1450px;
-    }
-}
-
-.footer {
-    @media (max-width: 450px) {
-        font-size: 0.5em;
-        margin-top: 50px;
     }
 }
 

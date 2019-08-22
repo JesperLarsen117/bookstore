@@ -27,7 +27,6 @@ const bookBtn = document.getElementsByClassName("main__button");
 
 let bookTitle = document.getElementById("book-title");
 let bookImg = document.getElementById("book-img");
-popup.style.display = "none";
 
 let sliderBox = document.getElementsByClassName("slider__box")
 let sliderInt = 0;

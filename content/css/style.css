@@ -183,6 +183,53 @@ body {
   text-decoration: none;
 }
 
+.header__nav {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 200ms ease-in-out;
+  transition: -webkit-transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
+  width: 20%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #FFFFFF;
+  height: 100%;
+}
+
+.header__nav-arrow {
+  display: block;
+  margin: 1em;
+  padding: 1em;
+  cursor: pointer;
+}
+
+.header__nav-logo {
+  display: block;
+  width: 120px;
+  margin: 2em auto;
+}
+
+.header__nav-menu {
+  margin-top: 2em;
+}
+
+.header__nav-menu-item {
+  list-style-type: none;
+  padding: 1em 0;
+  text-align: center;
+}
+
+:hover > .header__nav-menu-item-dropdown {
+  display: block;
+}
+
+.header__nav-menu-item-link {
+  color: #414141;
+  text-decoration: none;
+}
+
 .header__nav-menu-item-dropdown {
   display: none;
 }
@@ -305,6 +352,103 @@ body {
 
 .content__article img {
   width: 100%;
+  height: 295px;
+  border: 1px solid lightgray;
+}
+
+.footer__content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  height: 70px;
+  background-color: #20CAAE;
+  text-align: center;
+  font-size: 1em;
+  margin-top: 80px;
+  padding: 25px;
+}
+
+.footer__content a {
+  text-decoration: none;
+  color: white;
+  padding: 1em;
+}
+
+.footer__content-button:last-child {
+  border: unset;
+}
+
+.footer__content-button {
+  border-right: 1px solid gray;
+}
+
+.footer__content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  height: 165px;
+  background-color: #20CAAE;
+  text-align: center;
+  font-size: 1em;
+  margin-top: 80px;
+  padding: 25px;
+}
+
+.footer__content a {
+  text-decoration: none;
+  color: white;
+  padding: 1em;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.footer__content a:hover {
+  color: #414141;
+}
+
+.footer__content-button {
+  border-right: 1px solid white;
+  border-left: 1px solid white;
+}
+
+.footer {
+  background-color: white;
+}
+
+.footer__text {
+  text-align: center;
+  font-size: 1.2em;
+  height: 60px;
+  margin-top: 25px;
+}
+
+.footer__text p {
+  color: #414141;
+}
+
+@media (max-width: 768px) {
+  .section__article {
+    display: block;
+    overflow: none;
+    margin-bottom: 200px;
+  }
+  .section__article-figcap {
+    margin-top: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section__article-bottem img {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    height: 300px;
+  }
 }
 
 .slider {
@@ -691,6 +835,7 @@ body {
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.705);
   z-index: 1002;
+  display: none;
 }
 
 .popup__close {
@@ -801,79 +946,6 @@ body {
   }
   .main__box {
     height: 46vh;
-  height: 295px;
-  border: 1px solid lightgray;
-}
-
-.footer__content {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-  height: 70px;
-  background-color: #20CAAE;
-  text-align: center;
-  font-size: 1em;
-  margin-top: 80px;
-  padding: 25px;
-}
-
-.footer__content a {
-  text-decoration: none;
-  color: white;
-  padding: 1em;
-}
-
-.footer__content-button:last-child {
-  border: unset;
-}
-
-.footer__content-button {
-  border-right: 1px solid gray;
-}
-
-.footer {
-  background-color: #FFFFFF;
-}
-
-.footer__text {
-  text-align: center;
-  font-size: 1.2em;
-  height: 60px;
-  margin-top: 25px;
-}
-
-.footer__text p {
-  color: #414141;
-}
-
-@media (max-width: 768px) {
-  .section__article {
-    display: block;
-    overflow: none;
-    margin-bottom: 200px;
-  }
-  .section__article-figcap {
-    margin-top: 150px;
-  }
-}
-
-@media (max-width: 768px) {
-  .section__article-bottem img {
-    display: none;
-  }
-}
-
-@media (max-width: 768px) {
-  .section {
-    height: 300px;
-  }
-}
-
-@media (max-width: 768px) {
-  .footer {
-    font-size: 0.7em;
-    margin-top: 50px;
   }
 }
 
@@ -930,13 +1002,6 @@ body {
 @media (max-width: 450px) {
   .section__article-fig-second {
     height: 1450px;
-  }
-}
-
-@media (max-width: 450px) {
-  .footer {
-    font-size: 0.5em;
-    margin-top: 50px;
   }
 }
 
