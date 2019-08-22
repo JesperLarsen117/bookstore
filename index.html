@@ -1,19 +1,173 @@
 <!DOCTYPE html>
 <html lang="da">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="author" content="Gruppe 2">
     <meta name="description" content="Boghandleren">
-    
     <!-- Stylesheets -->
     <link rel="stylesheet" href="content/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
     <title>Boghandleren</title>
 </head>
+
 <body>
-Test
+    <header class="header">
+        <section class="header__strip">
+            <ul class="header__menu">
+                <li class="header-strip-item"><a class="header__strip-dropdown" href="index.html">Gennemse kategorier <i class="fas fa-chevron-down"></i></a>
+                    <ul class="header__dropdown">
+                        <li class="header__list"><a class="header__list-link" href="#">Skøn litteratur</a></li>
+                        <li class="header__list"><a class="header__list-link" href="#">Fag litteratur</a></li>
+                        <li class="header__list"><a class="header__list-link" href="#">Børn og unge</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <img class="header__strip-logo" draggable="false" src="content/images/logo.svg" alt="boghandlerens logo">
+            <div class="header__strip-mobile-tab" id="rightMenuBtn">
+                <div class="header__strip-mobile-tab-container">
+                    <span class="header__strip-mobile-tab-container-lines"></span>
+                    <span class="header__strip-mobile-tab-container-lines"></span>
+                    <span class="header__strip-mobile-tab-container-lines"></span>
+                </div>
+                <span class="header__strip-mobile-tab-line"></span>
+                <p class="header__strip-mobile-tab-text">Menu</p>
+            </div>
+        </section>
+        <nav class="header__nav" id="rightMenu">
+            <i id="rightMenuBtnClose" class="header__nav-arrow fas fa-arrow-right"></i>
+            <img class="header__nav-logo" draggable="false" src="content/images/logo.svg" alt="boghandlerens logo">
+            <ul class="header__nav-menu">
+                <li class="header__nav-menu-item"><a href="#" class="header__nav-menu-item-link">Om Boghandleren</a>
+                </li>
+                <li class="header__nav-menu-item"><a href="#" class="header__nav-menu-item-link">Bogklubben<i class="fas fa-chevron-down"></i></a>
+                    <ul class="header__nav-menu-item-dropdown">
+                        <li class="header__nav-menu-item-dropdown-item"><a href="#" class="header__nav-menu-item-dropdown-item-link">Nyheder</a></li>
+                        <li class="header__nav-menu-item-dropdown-item"><a href="#" class="header__nav-menu-item-dropdown-item-link">Arragementer</a></li>
+                        <li class="header__nav-menu-item-dropdown-item"><a href="#" class="header__nav-menu-item-dropdown-item-link">Månedens bog</a></li>
+                        <li class="header__nav-menu-item-dropdown-item"><a href="#" class="header__nav-menu-item-dropdown-item-link">Bog tips</a></li>
+                    </ul>
+                </li>
+                <li class="header__nav-menu-item"><a href="#" class="header__nav-menu-item-link">Akutuelt <i class="fas fa-chevron-down"></i></a>
+                    <ul class="header__nav-menu-item-dropdown">
+                        <li class="header__nav-menu-item-dropdown-item"><a href="#" class="header__nav-menu-item-dropdown-item-link">Skøn litteratur</a></li>
+                        <li class="header__nav-menu-item-dropdown-item"><a href="#" class="header__nav-menu-item-dropdown-item-link">Fag litteratur</a></li>
+                        <li class="header__nav-menu-item-dropdown-item"><a href="#" class="header__nav-menu-item-dropdown-item-link">Børn og unge</a></li>
+                    </ul>
+                </li>
+                <li class="header__nav-menu-item"><a href="#" class="header__nav-menu-item-link">Tilmelding</a>
+
+                </li>
+                <li class="header__nav-menu-item"><a href="#" class="header__nav-menu-item-link">Lånebørsen <i class="fas fa-chevron-down"></i></a>
+                    <ul class="header__nav-menu-item-dropdown">
+                        <li class="header__nav-menu-item-dropdown-item"><a href="#" class="header__nav-menu-item-dropdown-item-link">Kontakt</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </nav>
+    </header>
+    <section class="section">
+        <video class="section__video" src="content/images/Bookcase.mp4" autoplay muted loop type="video/mp4">
+
+    </video>
+
+        <h1>BOGHANDLEREN</h1>
+
+    </section>
+    <div style="width: 80%; margin: 0 auto;">
+        <section>
+            <article class="section__article">
+                <figure class="section__article-fig">
+                    <div class="section__article-fig-first">
+                        <img class="section__article-post-img" src="content/images/cafe-01.jpg" alt="cafe">
+
+                        <figcaption class="section__article-fig-figcap">
+
+                            <h3>Læse Café</h3>
+                            <p>Lad det bare være slået fast én gang for alle: Det er berigende at læse. Og endnu mere berigende bliver det, når læseoplevelsen deles med andre. Dét er der mange, der allerede har opdaget, og derfor inviterer Boghandleren hvert
+                                forår og efterår til Åbne Læsecaféer, hvor alle er velkomne til en snak om de udvalgte bøger og et glas vin fra egen import. </p>
+                            </br>
+
+                            <p><b>Sådan deltager du</b></p>
+
+                            <p>Boghandleren skaffer de bøger, der skal læses, og den aktuelle bog kan afhentes og lånes på det pågældende bibliotek ca. en måned inden, den er på programmet i læsecaféen.</p>
+                            </br>
+                            <p><b><i>Det er gratis at deltage i læsecaféerne</i></b></p>
+                            <a href="">Læse mere</a>
+                    </div>
+                    </figcaption>
+                    <figure class="section__article-bottem">
+                        <img src="content/images/Bookstore_Int_01.jpg" alt="bookstore">
+                    </figure>
+                </figure>
+
+                <figure class=" section__article-fig">
+                    <div class="section__article-fig-second">
+                        <img class="section__article-post-img " src="content/images/Bookstore_Int_-1.jpg " alt="cafe ">
+
+                        <figcaption class="section__article-fig-figcap ">
+                            <h3>Bog klubben</h3>
+                            <p>Fylder litteraturen meget i dit liv? Elsker du kvalitetsbøger og det såkaldt smalle, skæve og litterære?</p>
+                            </br>
+                            <p>Så er Klub boghandleren sikkert noget for dig. Det er stedet, hvor du får tilbudt de bedste romaner fra kvalitetsforfattere fra ind- og udland. Vi tager os tid til at vælge den vigtigste aktuelle litteratur ud, så du kan blive
+                                opdateret på det, der rører sig, det vi samles om og debatterer. Du bliver præsenteret for litteratur, der bryder grænser, litteraturhistoriens mest betydningsfulde værker og faglitteratur der udfordrer. </p>
+                            </br>
+                            <p>Der findes folk, der beklager kvalitetslitteraturens ringe udbredelse. I Klub boghandleren forholder det sig anderledes. Gennem 40 år har Klub boghandleren været i stand til at efterleve sit slogan Et vindue ud mod verden.
+                                Her giver vi plads til den litteratur, der måske ikke ellers levnes så stor opmærksomhed, men som fortjener det. </p>
+                            </br>
+                            <p>Vi formidler kendskabet til verdenslitteraturen og giver dig masser af tips til de største læseoplevelser fra mindre profilerede forfatterskaber, der er værd at holde øje med. Så hvis du - som alle de 20.000 medlemmer i Klub
+                                boghandleren - er bog elsker og insisterer på at kvalitetslitteraturen skal støttes, læses og have en platform, er Klub boghandleren stedet for dig. </p>
+                            </br>
+                            <p><b>MEDLEMSKAB OG PRISER:</b></p>
+                            </br>
+                            <p>Bogklubben: Eet år (12 bøger + arrangementer) 2200,-</p>
+                            </br>
+                            <p>Der afvikles min. 2 månedlige arrangementer.</p>
+                            <a href=" ">Læse mere</a>
+                        </figcaption>
+                    </div>
+                </figure>
+            </article>
+        </section>
+
+        <section class="content ">
+            <article class="content__article">
+                <figcaption class="content__article-figcap ">
+                    <h3>Lånebørsen</h3>
+                    <p>Vi brænder for bøger, og anbefaler dig gerne din næste læseoplevelse. </p>
+                    </br>
+                    <p>Boghandleren er en sammenslutning af lokale selvstændige boghandlere, som har det til fælles, at vi brænder rigtig meget for bøger. Hos os finder du et omfattende og bredt udvalg af alle de nye titler med stor forkærlighed for danske
+                        forfattere. Hver eneste dag arbejder vi på at lægge de rette bøger i de rette hænder. Vi læser selv mange af bøgerne, og er altid klar på at anbefale en god læseoplevelse til dig.</p>
+
+                </figcaption>
+                <figure class="content__article-fig-fig ">
+                    <img src="content/images/Books_02.jpg " alt="books ">
+
+                </figure>
+            </article>
+
+        </section>
+    </div>
+    <footer class="footer ">
+        <div class="footer__content ">
+            <div class="footer__content-button "><a href=" ">FIND BUTIK</a></div>
+            <div class="footer__content-button "><a href=" ">KUNDESERVICE</a></div>
+            <div class="footer__content-button "><a href=" ">OM BOGHANDLEREN</a></div>
+            <div class="footer__content-button "><a href=" ">TILMELD KLUB BOGHANDLEREN</a></div>
+
+        </div>
+        <div class="footer__text ">
+            <p>&copy;Copyright 2019 Boghandleren</p>
+        </div>
+    </footer>
+
     <!-- Font Awesome Icon Script  -->
-    <script src="https://kit.fontawesome.com/3ae7ff667f.js"></script>
+    <script src="content/js/main.js "></script>
+    <script src="https://kit.fontawesome.com/3ae7ff667f.js "></script>
 </body>
+
 </html>
