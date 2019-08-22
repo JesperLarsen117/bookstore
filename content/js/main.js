@@ -16,6 +16,11 @@ const skoenBtn = document.getElementById("skoen");
 const ungeBtn = document.getElementById("unge");
 const allBtn = document.getElementById("all");
 
+
+const fag = document.getElementsByClassName("fag");
+const skoen = document.getElementsByClassName("skoen");
+const unge = document.getElementsByClassName("unge");
+
 //popup
 const popup = document.getElementById("popup");
 const bookBtn = document.getElementsByClassName("main__button");
@@ -68,11 +73,6 @@ setInterval(() => {
         sliderContainer.style.transform = "translateX(-"+parseInt(sliderBox[0].clientWidth+32) * sliderInt+"px)";
     }
 }, 8000);
-
-
-const fag = document.getElementsByClassName("fag");
-const skoen = document.getElementsByClassName("skoen");
-const unge = document.getElementsByClassName("unge");
 
 fagBtn.onclick = () => {
     for (let i = 0; i < skoen.length; i++) {
