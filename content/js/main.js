@@ -14,6 +14,15 @@ const sliderContainer = document.getElementById("sliderContainer");
 const fagBtn = document.getElementById("fag");
 const skoenBtn = document.getElementById("skoen");
 const ungeBtn = document.getElementById("unge");
+const allBtn = document.getElementById("all");
+
+//popup
+const popup = document.getElementById("popup");
+const bookBtn = document.getElementsByClassName("main__button");
+
+let bookTitle = document.getElementById("book-title");
+let bookImg = document.getElementById("book-img");
+popup.style.display = "none";
 
 let sliderBox = document.getElementsByClassName("slider__box")
 let sliderInt = 0;
@@ -70,18 +79,16 @@ fagBtn.onclick = () => {
         skoen[i].style.opacity = "0";
         skoen[i].style.width = "0";
         skoen[i].style.margin = "0";
-        setInterval(() => {
-            skoen[i].style.display = "none";
-        }, 400);
+        skoen[i].style.display = "none";
+
         
     }
     for (let i = 0; i < unge.length; i++) {
         unge[i].style.opacity = "0";
         unge[i].style.width = "0";
         unge[i].style.margin = "0";
-        setInterval(() => {
-            unge[i].style.display = "none";
-        }, 400);
+        unge[i].style.display = "none";
+
     }
     for (let i = 0; i < fag.length; i++) {
         fag[i].style.opacity = "1";
@@ -97,17 +104,14 @@ skoenBtn.onclick = () => {
         fag[i].style.opacity = "0";
         fag[i].style.width = "0";
         fag[i].style.margin = "0";
-        setInterval(() => {
-            fag[i].style.display = "none";
-        }, 400);
+        fag[i].style.display = "none";
     }
     for (let i = 0; i < unge.length; i++) {
         unge[i].style.opacity = "0";
         unge[i].style.width = "0";
         unge[i].style.margin = "0";
-        setInterval(() => {
-            unge[i].style.display = "none";
-        }, 400);
+        unge[i].style.display = "none";
+
     }
     for (let i = 0; i < skoen.length; i++) {
         skoen[i].style.opacity = "1";
@@ -121,17 +125,15 @@ ungeBtn.onclick = () => {
         fag[i].style.opacity = "0";
         fag[i].style.width = "0";
         fag[i].style.margin = "0";
-        setInterval(() => {
-            fag[i].style.display = "none";
-        }, 400);
+        fag[i].style.display = "none";
+
     }
     for (let i = 0; i < skoen.length; i++) {
         skoen[i].style.opacity = "0";
         skoen[i].style.width = "0";
         skoen[i].style.margin = "0";
-        setInterval(() => {
-            skoen[i].style.display = "none";
-        }, 400);
+        skoen[i].style.display = "none";
+
     }
     for (let i = 0; i < unge.length; i++) {
         unge[i].style.opacity = "1";
@@ -140,3 +142,41 @@ ungeBtn.onclick = () => {
         unge[i].style.display = "inline-block";
     }
 }
+
+allBtn.onclick = () => {
+    for (let i = 0; i < unge.length; i++) {
+        unge[i].style.opacity = "1";
+        unge[i].style.width = "40%";
+        unge[i].style.margin = "2em";
+        unge[i].style.display = "inline-block";
+    }
+    for (let i = 0; i < skoen.length; i++) {
+        skoen[i].style.opacity = "1";
+        skoen[i].style.width = "40%";
+        skoen[i].style.margin = "2em";
+        skoen[i].style.display = "inline-block";
+    }
+    for (let i = 0; i < fag.length; i++) {
+        fag[i].style.opacity = "1";
+        fag[i].style.width = "40%";
+        fag[i].style.margin = "2em";
+        fag[i].style.display = "inline-block";
+    }
+}
+
+for (let i = 0; i < bookBtn.length; i++) {
+    bookBtn[i].onclick = () => {
+        bookTitle.innerHTML = bookBtn[i].parentNode.childNodes[1].innerHTML;
+        bookImg.attributes[0].nodeValue = bookBtn[i].parentNode.parentNode.childNodes[1].childNodes[1].attributes[0].nodeValue;
+        popup.style.display = "block";
+    } 
+}
+popup.addEventListener("click", function(event) {
+	// If user clicks inside the element, do nothing
+	if (event.target.closest(".popup")) return;
+
+    // If user clicks outside the element, hide it!
+    popup.style.display = "none";
+
+	;
+});
