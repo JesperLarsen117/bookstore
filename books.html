@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="author" content="Gruppe 2">
     <meta name="description" content="Boghandleren">
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600&display=swap" rel="stylesheet">
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="content/css/style.css">
@@ -14,9 +16,439 @@
 </head>
 
 <body>
+    <header class="header">
+        <section class="header__strip">
+            <ul class="header__menu">
+                <li class="header-strip-item"><a class="header__strip-dropdown" href="index.html">Gennemse kategorier <i
+                            class="fas fa-chevron-down"></i></a>
+                    <ul class="header__dropdown">
+                        <li class="header__list"><a class="header__list-link" href="#">Skøn litteratur</a></li>
+                        <li class="header__list"><a class="header__list-link" href="#">Fag litteratur</a></li>
+                        <li class="header__list"><a class="header__list-link" href="#">Børn og unge</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <img class="header__strip-logo" draggable="false" src="content/images/logo.svg" alt="boghandlerens logo">
+            <div class="header__strip-mobile-tab" id="rightMenuBtn">
+                <div class="header__strip-mobile-tab-container">
+                    <span class="header__strip-mobile-tab-container-lines"></span>
+                    <span class="header__strip-mobile-tab-container-lines"></span>
+                    <span class="header__strip-mobile-tab-container-lines"></span>
+                </div>
+                <span class="header__strip-mobile-tab-line"></span>
+                <p class="header__strip-mobile-tab-text">Menu</p>
+            </div>
+        </section>
+        <nav class="header__nav" id="rightMenu">
+            <i id="rightMenuBtnClose" class="header__nav-arrow fas fa-arrow-right"></i>
+            <img class="header__nav-logo" draggable="false" src="content/images/logo.svg" alt="boghandlerens logo">
+            <ul class="header__nav-menu">
+                <li class="header__nav-menu-item"><a href="#" class="header__nav-menu-item-link">Om Boghandleren</a>
+                </li>
+                <li class="header__nav-menu-item"><a href="#" class="header__nav-menu-item-link">Bogklubben<i
+                            class="fas fa-chevron-down"></i></a>
+                    <ul class="header__nav-menu-item-dropdown">
+                        <li class="header__nav-menu-item-dropdown-item"><a href="#"
+                                class="header__nav-menu-item-dropdown-item-link">Nyheder</a></li>
+                        <li class="header__nav-menu-item-dropdown-item"><a href="#"
+                                class="header__nav-menu-item-dropdown-item-link">Arragementer</a></li>
+                        <li class="header__nav-menu-item-dropdown-item"><a href="#"
+                                class="header__nav-menu-item-dropdown-item-link">Månedens bog</a></li>
+                        <li class="header__nav-menu-item-dropdown-item"><a href="#"
+                                class="header__nav-menu-item-dropdown-item-link">Bog tips</a></li>
+                    </ul>
+                </li>
+                <li class="header__nav-menu-item"><a href="#" class="header__nav-menu-item-link">Akutuelt <i
+                            class="fas fa-chevron-down"></i></a>
+                    <ul class="header__nav-menu-item-dropdown">
+                        <li class="header__nav-menu-item-dropdown-item"><a href="#"
+                                class="header__nav-menu-item-dropdown-item-link">Skøn litteratur</a></li>
+                        <li class="header__nav-menu-item-dropdown-item"><a href="#"
+                                class="header__nav-menu-item-dropdown-item-link">Fag litteratur</a></li>
+                        <li class="header__nav-menu-item-dropdown-item"><a href="#"
+                                class="header__nav-menu-item-dropdown-item-link">Børn og unge</a></li>
+                    </ul>
+                </li>
+                <li class="header__nav-menu-item"><a href="#" class="header__nav-menu-item-link">Tilmelding</a>
 
+                </li>
+                <li class="header__nav-menu-item"><a href="#" class="header__nav-menu-item-link">Lånebørsen <i
+                            class="fas fa-chevron-down"></i></a>
+                    <ul class="header__nav-menu-item-dropdown">
+                        <li class="header__nav-menu-item-dropdown-item"><a href="#"
+                                class="header__nav-menu-item-dropdown-item-link">Kontakt</a></li>
+                    </ul>
+                </li>
 
+            </ul>
+        </nav>
+    </header>
+
+    <section class="slider">
+        <div id="arrow-left" class="slider__arrow-left"><i class="fas fa-chevron-left"></i></div>
+        <div id="arrow-right" class="slider__arrow-right"><i class="fas fa-chevron-right"></i></div>
+        <div id="sliderContainer" class="slider__container">
+            <article class="slider__box">
+                <figure class="slider__fig">
+                    <img class="slider__img" src="content/images/books/ensomhed.jpg" alt="" class="slider__img">
+                </figure>
+                <div class="slider__text-container">
+                    <h3 class="slider__header-text">100 års ensomhed</h3>
+                    <div class="slider__hearts">
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <p class="slider__text">
+                        Den colombianske mesterforfatter Gabriel Garcia Marquez, som verden måtte tage afsked med i
+                        april 2014, er manden bag “100 års ensomhed”.
+                        “100 års ensomhed” er en roman, der handler om hvordan to unge mennesker skaber en fiktiv og
+                        isoleret latinamerikansk...
+                    </p>
+                    <button class="slider__button" type="button">book den her bog</button>
+                </div>
+            </article>
+            <article class="slider__box">
+                <figure class="slider__fig">
+                    <img class="slider__img" src="content/images/books/fisker.jpg" alt="" class="slider__img">
+                </figure>
+                <div class="slider__text-container">
+                    <h3 class="slider__header-text">100 års ensomhed</h3>
+                    <div class="slider__hearts">
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <p class="slider__text">
+                        Den colombianske mesterforfatter Gabriel Garcia Marquez, som verden måtte tage afsked med i
+                        april 2014, er manden bag “100 års ensomhed”.
+                        “100 års ensomhed” er en roman, der handler om hvordan to unge mennesker skaber en fiktiv og
+                        isoleret latinamerikansk...
+                    </p>
+                    <button class="slider__button" type="button">book den her bog</button>
+                </div>
+            </article>
+            <article class="slider__box">
+                <figure class="slider__fig">
+                    <img class="slider__img" src="content/images/books/hele_byen.jpg" alt="" class="slider__img">
+                </figure>
+                <div class="slider__text-container">
+                    <h3 class="slider__header-text">100 års ensomhed</h3>
+                    <div class="slider__hearts">
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <p class="slider__text">
+                        Den colombianske mesterforfatter Gabriel Garcia Marquez, som verden måtte tage afsked med i
+                        april 2014, er manden bag “100 års ensomhed”.
+                        “100 års ensomhed” er en roman, der handler om hvordan to unge mennesker skaber en fiktiv og
+                        isoleret latinamerikansk...
+                    </p>
+                    <button class="slider__button" type="button">book den her bog</button>
+                </div>
+            </article>
+            <article class="slider__box">
+                <figure class="slider__fig">
+                    <img class="slider__img" src="content/images/books/til_doeden.jpg" alt="" class="slider__img">
+                </figure>
+                <div class="slider__text-container">
+                    <h3 class="slider__header-text">100 års ensomhed</h3>
+                    <div class="slider__hearts">
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <p class="slider__text">
+                        Den colombianske mesterforfatter Gabriel Garcia Marquez, som verden måtte tage afsked med i
+                        april 2014, er manden bag “100 års ensomhed”.
+                        “100 års ensomhed” er en roman, der handler om hvordan to unge mennesker skaber en fiktiv og
+                        isoleret latinamerikansk...
+                    </p>
+                    <button class="slider__button" type="button">book den her bog</button>
+                </div>
+            </article>
+            <article class="slider__box">
+                <figure class="slider__fig">
+                    <img class="slider__img" src="content/images/books/vejen.jpg" alt="" class="slider__img">
+                </figure>
+                <div class="slider__text-container">
+                    <h3 class="slider__header-text">100 års ensomhed</h3>
+                    <div class="slider__hearts">
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <p class="slider__text">
+                        Den colombianske mesterforfatter Gabriel Garcia Marquez, som verden måtte tage afsked med i
+                        april 2014, er manden bag “100 års ensomhed”.
+                        “100 års ensomhed” er en roman, der handler om hvordan to unge mennesker skaber en fiktiv og
+                        isoleret latinamerikansk...
+                    </p>
+                    <button class="slider__button" type="button">book den her bog</button>
+                </div>
+            </article>
+        </div>
+    </section>
+    <!-- -------- -->
+    <!-- --Main-- -->
+    <!-- -------- -->
+    <section class="main">
+        <article class="main__best-books">
+            <h2>Månedens bøger</h2>
+        </article>
+        <section class="main__books-container">
+            <div class="main__sort">
+                <p>Alle genre </p>
+                <button type="button" id="skoen" class="main__link">Skøn litteratur</button>
+                <button type="button" id="fag" class="main__link">Fag litteratur</button>
+                <button type="button" id="unge" class="main__link">Børn og unge</button>
+            </div>
+            <section class="main__books">
+                <article class="main__box skoen" data-bookType="skoen">
+                    <figure class="main__fig">
+                        <img src="content/images/books/ensomhed.jpg" alt="book" class="main__img">
+                    </figure>
+                    <div class="main__info-container">
+                        <h3 class="main__header-text">100 års ensomhed</h3>
+                        <div class="main__hearts">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <p class="main__text">
+                            Den colombianske mesterforfatter Gabriel Garcia Marquez, som verden måtte tage afsked med i
+                            april 2014, er manden bag “100 års ensomhed”.
+                            “100 års ensomhed” er en roman, der handler om hvordan to unge mennesker skaber en fiktiv og
+                            isoleret latinamerikansk...
+                        </p>
+                        <button class="main__button" type="button">book den her bog</button>
+                    </div>
+                </article>
+
+                <article class="main__box fag" data-bookType="fag">
+                    <figure class="main__fig">
+                        <img src="content/images/books/hele_byen.jpg" alt="book" class="main__img">
+                    </figure>
+                    <div class="main__info-container">
+                        <h3 class="main__header-text">100 års ensomhed</h3>
+                        <div class="main__hearts">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <p class="main__text">
+                            Den colombianske mesterforfatter Gabriel Garcia Marquez, som verden måtte tage afsked med i
+                            april 2014, er manden bag “100 års ensomhed”.
+                            “100 års ensomhed” er en roman, der handler om hvordan to unge mennesker skaber en fiktiv og
+                            isoleret latinamerikansk...
+                        </p>
+                        <button class="main__button" type="button">book den her bog</button>
+                    </div>
+                </article>
+
+                <article class="main__box skoen" data-bookType="skoen">
+                    <figure class="main__fig">
+                        <img src="content/images/books/vejen.jpg" alt="book" class="main__img">
+                    </figure>
+                    <div class="main__info-container">
+                        <h3 class="main__header-text">100 års ensomhed</h3>
+                        <div class="main__hearts">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <p class="main__text">
+                            Den colombianske mesterforfatter Gabriel Garcia Marquez, som verden måtte tage afsked med i
+                            april 2014, er manden bag “100 års ensomhed”.
+                            “100 års ensomhed” er en roman, der handler om hvordan to unge mennesker skaber en fiktiv og
+                            isoleret latinamerikansk...
+                        </p>
+                        <button class="main__button" type="button">book den her bog</button>
+                    </div>
+                </article>
+
+                <article class="main__box unge" data-bookType="unge">
+                    <figure class="main__fig">
+                        <img src="content/images/books/hele_byen.jpg" alt="book" class="main__img">
+                    </figure>
+                    <div class="main__info-container">
+                        <h3 class="main__header-text">100 års ensomhed</h3>
+                        <div class="main__hearts">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <p class="main__text">
+                            Den colombianske mesterforfatter Gabriel Garcia Marquez, som verden måtte tage afsked med i
+                            april 2014, er manden bag “100 års ensomhed”.
+                            “100 års ensomhed” er en roman, der handler om hvordan to unge mennesker skaber en fiktiv og
+                            isoleret latinamerikansk...
+                        </p>
+                        <button class="main__button" type="button">book den her bog</button>
+                    </div>
+                </article>
+
+                <article class="main__box fag" data-bookType="fag">
+                    <figure class="main__fig">
+                        <img src="content/images/books/til_doeden.jpg" alt="book" class="main__img">
+                    </figure>
+                    <div class="main__info-container">
+                        <h3 class="main__header-text">100 års ensomhed</h3>
+                        <div class="main__hearts">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <p class="main__text">
+                            Den colombianske mesterforfatter Gabriel Garcia Marquez, som verden måtte tage afsked med i
+                            april 2014, er manden bag “100 års ensomhed”.
+                            “100 års ensomhed” er en roman, der handler om hvordan to unge mennesker skaber en fiktiv og
+                            isoleret latinamerikansk...
+                        </p>
+                        <button class="main__button" type="button">book den her bog</button>
+                    </div>
+                </article>
+
+                <article class="main__box fag" data-bookType="fag">
+                    <figure class="main__fig">
+                        <img src="content/images/books/fisker.jpg" alt="book" class="main__img">
+                    </figure>
+                    <div class="main__info-container">
+                        <h3 class="main__header-text">100 års ensomhed</h3>
+                        <div class="main__hearts">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <p class="main__text">
+                            Den colombianske mesterforfatter Gabriel Garcia Marquez, som verden måtte tage afsked med i
+                            april 2014, er manden bag “100 års ensomhed”.
+                            “100 års ensomhed” er en roman, der handler om hvordan to unge mennesker skaber en fiktiv og
+                            isoleret latinamerikansk...
+                        </p>
+                        <button class="main__button" type="button">book den her bog</button>
+                    </div>
+                </article>
+
+                <article class="main__box skoen" data-bookType="skoen">
+                    <figure class="main__fig">
+                        <img src="content/images/books/til_doeden.jpg" alt="book" class="main__img">
+                    </figure>
+                    <div class="main__info-container">
+                        <h3 class="main__header-text">100 års ensomhed</h3>
+                        <div class="main__hearts">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <p class="main__text">
+                            Den colombianske mesterforfatter Gabriel Garcia Marquez, som verden måtte tage afsked med i
+                            april 2014, er manden bag “100 års ensomhed”.
+                            “100 års ensomhed” er en roman, der handler om hvordan to unge mennesker skaber en fiktiv og
+                            isoleret latinamerikansk...
+                        </p>
+                        <button class="main__button" type="button">book den her bog</button>
+                    </div>
+                </article>
+
+                <article class="main__box unge"  data-bookType="unge">
+                    <figure class="main__fig">
+                        <img src="content/images/books/ensomhed.jpg" alt="book" class="main__img">
+                    </figure>
+                    <div class="main__info-container">
+                        <h3 class="main__header-text">100 års ensomhed</h3>
+                        <div class="main__hearts">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <p class="main__text">
+                            Den colombianske mesterforfatter Gabriel Garcia Marquez, som verden måtte tage afsked med i
+                            april 2014, er manden bag “100 års ensomhed”.
+                            “100 års ensomhed” er en roman, der handler om hvordan to unge mennesker skaber en fiktiv og
+                            isoleret latinamerikansk...
+                        </p>
+                        <button class="main__button" type="button">book den her bog</button>
+                    </div>
+                </article>
+
+                <article class="main__box fag" data-bookType="fag">
+                    <figure class="main__fig">
+                        <img src="content/images/books/vejen.jpg" alt="book" class="main__img">
+                    </figure>
+                    <div class="main__info-container">
+                        <h3 class="main__header-text">100 års ensomhed</h3>
+                        <div class="main__hearts">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <p class="main__text">
+                            Den colombianske mesterforfatter Gabriel Garcia Marquez, som verden måtte tage afsked med i
+                            april 2014, er manden bag “100 års ensomhed”.
+                            “100 års ensomhed” er en roman, der handler om hvordan to unge mennesker skaber en fiktiv og
+                            isoleret latinamerikansk...
+                        </p>
+                        <button class="main__button" type="button">book den her bog</button>
+                    </div>
+                </article>
+
+                <article class="main__box unge"  data-bookType="unge">
+                    <figure class="main__fig">
+                        <img src="content/images/books/hele_byen.jpg" alt="book" class="main__img">
+                    </figure>
+                    <div class="main__info-container">
+                        <h3 class="main__header-text">100 års ensomhed</h3>
+                        <div class="main__hearts">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <p class="main__text">
+                            Den colombianske mesterforfatter Gabriel Garcia Marquez, som verden måtte tage afsked med i
+                            april 2014, er manden bag “100 års ensomhed”.
+                            “100 års ensomhed” er en roman, der handler om hvordan to unge mennesker skaber en fiktiv og
+                            isoleret latinamerikansk...
+                        </p>
+                        <button class="main__button" type="button">book den her bog</button>
+                    </div>
+                </article>
+            </section>
+        </section>
+    </section>
     <!-- Font Awesome Icon Script  -->
+    <script src="content/js/main.js"></script>
     <script src="https://kit.fontawesome.com/3ae7ff667f.js"></script>
 </body>
 
