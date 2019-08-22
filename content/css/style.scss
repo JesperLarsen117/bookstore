@@ -274,7 +274,9 @@ body {
         width: 100%;
     }
 
-    &__text {margin: .4em .2em;}
+    &__text {margin: .4em .2em;
+    
+    }
 
     &__text-info {
 
@@ -290,7 +292,7 @@ body {
         }
     }
 
-    &__text__days,  &__text-cdays, &__text-ctimes, &__text-times,  &__text-info, .container-contact__headings {
+    &__text-days,  &__text-cdays, &__text-ctimes, &__text-times,  &__text-info, .container-contact__headings {
         list-style: none;
         margin: .4em .2em;
         @include breakpoint(desktop) {

@@ -296,13 +296,13 @@ body {
   }
 }
 
-.container-contact__text__days, .container-contact__text-cdays, .container-contact__text-ctimes, .container-contact__text-times, .container-contact__text-info, .container-contact .container-contact__headings {
+.container-contact__text-days, .container-contact__text-cdays, .container-contact__text-ctimes, .container-contact__text-times, .container-contact__text-info, .container-contact .container-contact__headings {
   list-style: none;
   margin: .4em .2em;
 }
 
 @media (min-width: 1200px) {
-  .container-contact__text__days, .container-contact__text-cdays, .container-contact__text-ctimes, .container-contact__text-times, .container-contact__text-info, .container-contact .container-contact__headings {
+  .container-contact__text-days, .container-contact__text-cdays, .container-contact__text-ctimes, .container-contact__text-times, .container-contact__text-info, .container-contact .container-contact__headings {
     margin: .8em 2em;
   }
 }
