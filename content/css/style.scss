@@ -3,6 +3,34 @@ $font-color2: #eee;
 $highlight-color: #20CAAE;
 $bg-color: #E5E5E5;
 $bg-box-color: #fff;
+
+
+  /// Mixin to manage responsive breakpoints
+  $breakpoints: (
+    'mobile': 767px,
+    'tablet': 992px,
+    'desktop': 1200px,
+    )!default;
+
+/// @author Hugo Giraudel
+/// @param {String} $breakpoint - Breakpoint name
+/// @require $breakpoints
+@mixin breakpoint($breakpoint) {
+// If the key exists in the map
+@if map-has-key($breakpoints, $breakpoint) {
+  // Prints a media query based on the value
+  @media (min-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+// If the key doesn't exist in the map
+@else {
+  @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+      + "Available breakpoints are: #{map-keys($breakpoints)}.";
+}
+}
+
 // 'Mixin for Drop Shadow on Cards'
 @mixin cardShadow($h: 2px, $v: 3px, $b:15px, $brand-color: rgba(0, 0, 0, .25)) {
     -webkit-box-shadow: $h $v $b $brand-color;
@@ -35,62 +63,309 @@ $bg-box-color: #fff;
     box-sizing: border-box;
 }
 
-.box {
-    border: 1px solid $highlight-color;
-    width: 20px;
-}
-
 body {
+    overflow-x: hidden;
+    font-family: 'Monsterrat', sans-serif;
     background-color: $bg-color;
+    @include breakpoint(tablet) {
+        line-height: 1.3;
+    }
 }
 
-.section {
-    height: 350px;
-    overflow: hidden;
-    &__video {
-        width: 100%;
+
+// NAV BAR 
+.header {
+    &__strip {
+      position: relative;
+      z-index: 101;
+      width: 100%;
+      background-color: $bg-box-color;
+      display: grid;
+      grid-template-columns: 20% 1fr 20%;
+      &-dropdown {
+          color: $font-color;
+          text-decoration: none;
+          align-self: center;
+          justify-self: center;
+      }
+      &-logo {
+          width: 120px;
+          justify-self: center;
+      }
+      &-mobile-tab {
+          display: flex;
+          align-self: center;
+          align-items: center;
+          justify-self: center;
+          cursor: pointer;
+          &-container {
+              display: inline-block;
+              transform: rotateY(180deg);
+              &-lines {
+                  display: block;
+                  height: 2px;
+                  margin: 0.2em 0;
+                  background-color: $font-color;
+                  &:nth-child(1) {
+                      width: 20px;
+                  }
+                  &:nth-child(2) {
+                      width: 10px;
+                  }
+                  &:nth-child(3) {
+                      width: 15px;
+                  }
+              }
+          }
+          &-line {
+              display: inline-block;
+              height: 30px;
+              width: 2px;
+              margin: 0 1em;
+              background-color: $font-color;
+          }
+          &-text {
+              display: inline-block;
+          }
+      }
     }
-    &__article {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 40px;
-        height: 800px;
-        margin: 20px;
-        margin-top: 40px;
-        &-fig {
-            width: 100%;
-            background-color: $bg-box-color;
-            img {
-                width: 100%;
-                object-fit: cover;
-            }
-            &-figcap {
-                width: 100%;
-                padding: 15px;
+}
+
+.header__menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    .header-strip-item {
+          position: relative;
+          display: inline-block;
+      &:hover .header__list{
+          display: block;
+      }
+    }
+  .header__dropdown {
+      position: absolute;
+      left: 0;
+      right: 0;
+      background-color: $bg-box-color;
+      padding: 0  1em;
+      box-shadow: 0 15px 10px 2px rgba(0,0,0,0.25);
+      .header__list {
+          padding: 1.8em 0;
+          // text-align: center;
+          display: none;
+          .header__list-link {
+              text-decoration: none;
+              color: $font-color;
+          }
+      }
+  }
+}
+
+.header__nav {
+    transform: translateX(100%);
+    transition: transform 200ms ease-in-out;
+    width: 20%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: $bg-box-color;
+    height: 100%;
+    z-index: 101;
+    @include posterShadow();
+    &-arrow {
+        display: block;
+        margin: 1em;
+        padding: 1em;
+        cursor: pointer;
+    }
+    &-logo {
+        display: block;
+        width: 120px;
+        margin: 2em auto;
+    }
+    &-menu {
+        margin-top: 2em;
+        &-item {
+            list-style-type: none;
+            padding: 1em 0;
+            text-align: center;
+              :hover > &-dropdown{
+                  display: block;
+              }
+            &-link {
                 color: $font-color;
-                h3 {
-                    margin: 15px;
-                }
+                text-decoration: none;
+
+            }
+            &-dropdown {
+              display: none;
+              &-item {
+                  list-style-type: none;
+                  padding: 1em 0;
+                  text-align: center;
+                  background-color: #ececec;
+                  &-link {
+                      color: $font-color;
+                      text-decoration: none;
+                  }
+              }
             }
         }
     }
 }
 
-.content__article {
+
+// NAV BAR END
+
+.container-about, .container-contact, .mail {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 20px;
-    margin-top: 40px;
-    &-figcap {
+    margin: 0 auto;
+    width: 80%;
+    background-color: $bg-box-color;
+    @include posterShadow();
+}
+
+.container-about {
+    grid-template-columns: 1fr;
+
+    @include breakpoint(tablet) {
+        grid-template-columns: 60% 40%;
+    }
+    
+    &__fig {
         width: 100%;
-        padding: 30px;
-        background-color: $bg-box-color;
-        color: $font-color;
-        h3 {
-            margin: 15px;
+        margin: 0 0 -5px 0px;
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+    &__text {
+        margin: 1.4em .2em;
+
+        @include breakpoint(tablet) {
+        margin: .4em .2em;
+
+        }
+        @include breakpoint(desktop) {
+            width: 60%;
+            margin: auto;
         }
     }
-    img {
+}
+
+.container-contact {
+    grid-template-columns: 1fr;
+
+    @include breakpoint(tablet) {
+        grid-template-columns: 40% 60%;
+    }
+
+    &__txtdt, &__txtcdt {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+    &__fig {
+        margin: 0 0 -5px 0px;
+    }
+
+    &__img {
         width: 100%;
     }
+
+    &__text {margin: .4em .2em;}
+
+    &__text-info {
+
+        &-item {
+            margin: 1em 0;
+
+            @include breakpoint(tablet) {
+                margin: -.18em 0;
+            }
+            @include breakpoint(desktop) {
+                margin: 1em 0;
+            }
+        }
+    }
+
+    &__text__days,  &__text-cdays, &__text-ctimes, &__text-times,  &__text-info, .container-contact__headings {
+        list-style: none;
+        margin: .4em .2em;
+        @include breakpoint(desktop) {
+            margin: .8em 2em;
+        }
+    }
 }
+
+.mail {
+    grid-template-columns: 1fr;
+    &__form {
+        margin: 3em auto;
+
+    &-name, &-email, &-msg {
+        border-top: transparent;
+        border-left: transparent;
+        border-bottom: 1px solid #E5E5E5E5;
+        border-right: transparent;
+        width: 220px;
+        margin: 2em auto;
+        outline: none;
+        font-size: 1em;
+        @include breakpoint(mobile) {
+            width: 440px;
+        }
+        }
+    
+    &-btn {
+        height: 3em;
+        background: transparent;
+        border-radius: 25px;
+        border: 2px solid $highlight-color;
+        color: $highlight-color;
+        width: 7em;
+        height: 40px;
+        
+
+    }
+    }
+}
+
+// FOOTER START
+.footer__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    height: 70px;
+    background-color: $highlight-color;
+    text-align: center;
+    font-size: 1em;
+    margin-top: 80px;
+    padding: 25px;
+    a {
+        text-decoration: none;
+        color: white;
+        padding: 1em;
+    }
+    &-button:last-child {
+        border: unset;
+    }
+    &-button {
+        border-right: 1px solid gray;
+    }
+}
+
+.footer {
+    background-color: white;
+    &__text {
+        text-align: center;
+        font-size: 1.2em;
+        height: 60px;
+        margin-top: 25px;
+        p {
+            color: $font-color;
+        }
+    }
+}
+
+// FOOTER END
