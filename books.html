@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="author" content="Gruppe 2">
     <meta name="description" content="Boghandleren">
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600&display=swap" rel="stylesheet">
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="content/css/style.css">
@@ -14,9 +16,398 @@
 </head>
 
 <body>
+    <header class="header">
+        <section class="header__strip">
+            <ul class="header__menu">
+                <li class="header-strip-item"><a class="header__strip-dropdown" href="books.html">Gennemse kategorier <i
+                            class="fas fa-chevron-down"></i></a>
+                    <ul class="header__dropdown">
+                        <li class="header__list"><a class="header__list-link" href="books.html">Skøn litteratur</a></li>
+                        <li class="header__list"><a class="header__list-link" href="books.html">Fag litteratur</a></li>
+                        <li class="header__list"><a class="header__list-link" href="books.html">Børn og unge</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <a href="index.html" class="header__strip-logo"> <img draggable="false" src="content/images/logo.svg" alt="boghandlerens logo"></a>
+            <div class="header__strip-mobile-tab" id="rightMenuBtn">
+                <div class="header__strip-mobile-tab-container">
+                    <span class="header__strip-mobile-tab-container-lines"></span>
+                    <span class="header__strip-mobile-tab-container-lines"></span>
+                    <span class="header__strip-mobile-tab-container-lines"></span>
+                </div>
+                <span class="header__strip-mobile-tab-line"></span>
+                <p class="header__strip-mobile-tab-text">Menu</p>
+            </div>
+        </section>
+        <nav class="header__nav" id="rightMenu">
+            <i id="rightMenuBtnClose" class="header__nav-arrow fas fa-arrow-right"></i>
+            <a href="index.html" class="header__nav-logo"> <img draggable="false" src="content/images/logo.svg" alt="boghandlerens logo"></a>
+            <ul class="header__nav-menu">
+                <li class="header__nav-menu-item"><a href="boghandleren.html" class="header__nav-menu-item-link">Om Boghandleren</a>
+                </li>
+                <li class="header__nav-menu-item"><a href="tilmelding.html" class="header__nav-menu-item-link">Bogklubben<i class="fas fa-chevron-down"></i></a>
+                    <ul class="header__nav-menu-item-dropdown">
+                        <li class="header__nav-menu-item-dropdown-item"><a href="tilmelding.html"
+                                class="header__nav-menu-item-dropdown-item-link">Nyheder</></li>
+                        <li class="header__nav-menu-item-dropdown-item"><a href="tilmelding.html"
+                                class="header__nav-menu-item-dropdown-item-link">Arragementer</a></li>
+                        <li class="header__nav-menu-item-dropdown-item"><a href="tilmelding.html"
+                                class="header__nav-menu-item-dropdown-item-link">Månedens bog</a></li>
+                        <li class="header__nav-menu-item-dropdown-item"><a href="tilmelding.html"
+                                class="header__nav-menu-item-dropdown-item-link">Bog tips</a></li>
+                    </ul>
+                </li>
+                <li class="header__nav-menu-item"><a href="#" class="header__nav-menu-item-link">Akutuelt <i
+                            class="fas fa-chevron-down"></i></a>
+                    <ul class="header__nav-menu-item-dropdown">
+                        <li class="header__nav-menu-item-dropdown-item"><a href="books.html"
+                                class="header__nav-menu-item-dropdown-item-link">Skøn litteratur</a></li>
+                        <li class="header__nav-menu-item-dropdown-item"><a href="books.html"
+                                class="header__nav-menu-item-dropdown-item-link">Fag litteratur</a></li>
+                        <li class="header__nav-menu-item-dropdown-item"><a href="books.html"
+                                class="header__nav-menu-item-dropdown-item-link">Børn og unge</a></li>
+                    </ul>
+                </li>
+                <li class="header__nav-menu-item"><a href="tilmelding.html" class="header__nav-menu-item-link">Tilmelding</a>
 
+                </li>
+                <li class="header__nav-menu-item"><a href="books.html" class="header__nav-menu-item-link">Lånebørsen <i
+                            class="fas fa-chevron-down"></i></a>
+                    <ul class="header__nav-menu-item-dropdown">
+                        <li class="header__nav-menu-item-dropdown-item"><a href="boghandleren.html"
+                                class="header__nav-menu-item-dropdown-item-link">Kontakt</a></li>
+                    </ul>
+                </li>
 
+            </ul>
+        </nav>
+    </header>
+
+    <section class="slider">
+        <div id="arrow-left" class="slider__arrow-left"><i class="fas fa-chevron-left"></i></div>
+        <div id="arrow-right" class="slider__arrow-right"><i class="fas fa-chevron-right"></i></div>
+        <div id="sliderContainer" class="slider__container">
+            <article class="slider__box">
+                <figure class="slider__fig">
+                    <img class="slider__img" src="content/images/books/ensomhed.jpg" alt="" class="slider__img">
+                </figure>
+                <div class="slider__text-container">
+                    <h3 class="slider__header-text">100 års ensomhed</h3>
+                    <div class="slider__hearts">
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <p class="slider__text">
+                        Den colombianske mesterforfatter Gabriel Garcia Marquez, som verden måtte tage afsked med i
+                        april 2014, er manden bag “100 års ensomhed”.
+                        “100 års ensomhed” er en roman, der handler om hvordan to unge mennesker skaber en fiktiv og
+                        isoleret latinamerikansk...
+                    </p>
+                    <button class="slider__button" type="button">book den her bog</button>
+                </div>
+            </article>
+            <article class="slider__box">
+                <figure class="slider__fig">
+                    <img class="slider__img" src="content/images/books/fisker.jpg" alt="" class="slider__img">
+                </figure>
+                <div class="slider__text-container">
+                    <h3 class="slider__header-text">Den fuldkomne fisker</h3>
+                    <div class="slider__hearts">
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <p class="slider__text">
+                        Biblen over alle bibler for lystfiskere. En hyldest til naturen i almindelighed og til lystfiskeri i særdeleshed med forord af Uffe Ellemann-Jensen og efterskrift af Kjeld Hillingsø. Illustreret med Ib Andersens smukke vignetter...
+                    </p>
+                    <button class="slider__button" type="button">book den her bog</button>
+                </div>
+            </article>
+            <article class="slider__box">
+                <figure class="slider__fig">
+                    <img class="slider__img" src="content/images/books/hele_byen.jpg" alt="" class="slider__img">
+                </figure>
+                <div class="slider__text-container">
+                    <h3 class="slider__header-text">Hele byen ved det</h3>
+                    <div class="slider__hearts">
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <p class="slider__text">
+                        "Hele byen ved det" handler om Tommy, der vil gøre alt for at få hævn på sin chef og vælger at afsløre hende i utroskab. Det første anonyme brev bliver til det næste, og alle han kender, der har bedraget deres ægtefæller eller kærester står for skud...
+                    </p>
+                    <button class="slider__button" type="button">book den her bog</button>
+                </div>
+            </article>
+            <article class="slider__box">
+                <figure class="slider__fig">
+                    <img class="slider__img" src="content/images/books/til_doeden.jpg" alt="" class="slider__img">
+                </figure>
+                <div class="slider__text-container">
+                    <h3 class="slider__header-text">Til døden os skiller</h3>
+                    <div class="slider__hearts">
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <p class="slider__text">
+                        Jake og Alice modtager til deres bryllup en mystisk gave: En invitation til en eksklusiv klub, hvor alle medlemmer følger nogle enkle regler – for at passe godt på ægteskabet. Og hvilke nygifte vil ikke gerne det? Klubben kalder...
+                    </p>
+                    <button class="slider__button" type="button">book den her bog</button>
+                </div>
+            </article>
+            <article class="slider__box">
+                <figure class="slider__fig">
+                    <img class="slider__img" src="content/images/books/vejen.jpg" alt="" class="slider__img">
+                </figure>
+                <div class="slider__text-container">
+                    <h3 class="slider__header-text">Vejen til mellemøsten</h3>
+                    <div class="slider__hearts">
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <p class="slider__text">
+                        Frantz Schrum og hans kolleger har slidt mange tusinde kilometer asfaldt fra Danmark til det gamle Østeuropa og videre ud i Mellemøstens store sandkasse fra Syrien og Jordan til det daværende Persien, Bagdad, Riyadh og Saudi Arabien. Mens den...
+                    </p>
+                    <button class="slider__button" type="button">book den her bog</button>
+                </div>
+            </article>
+        </div>
+    </section>
+    <!-- -------- -->
+    <!-- --Main-- -->
+    <!-- -------- -->
+    <section class="main">
+        <article class="main__best-books">
+            <h1>Månedens bøger</h1>
+            <article class="main__best-container">
+                <h2 class="main__best-text">#1</h2>
+                <figure class="main__best-fig">
+                    <img src="content/images/books/til_doeden.jpg" alt="book" class="main__best-img">
+                </figure>
+            </article>
+            <article class="main__best-container">
+                <h2 class="main__best-text">#2</h2>
+                <figure class="main__best-fig">
+                    <img src="content/images/books/hele_byen.jpg" alt="book" class="main__best-img">
+                </figure>
+            </article>
+            <article class="main__best-container">
+                <h2 class="main__best-text">#3</h2>
+                <figure class="main__best-fig">
+                    <img src="content/images/books/vejen.jpg" alt="book" class="main__best-img">
+                </figure>
+            </article>
+        </article>
+        <section class="main__books-container">
+            <div class="main__sort">
+                <p id="all" class="main__genre-text">Alle genre </p>
+                <div class="main__line"></div>
+                <button type="button" id="skoen" class="main__link">Skøn litteratur</button>
+                <button type="button" id="fag" class="main__link">Fag litteratur</button>
+                <button type="button" id="unge" class="main__link">Børn og unge</button>
+            </div>
+            <section class="main__books">
+                <article class="main__box skoen" data-bookType="skoen">
+                    <figure class="main__fig">
+                        <img src="content/images/books/ensomhed.jpg" alt="book" class="main__img">
+                    </figure>
+                    <div class="main__info-container">
+                        <h3 class="main__header-text">100 års ensomhed</h3>
+                        <div class="main__hearts">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <p class="main__text">
+                            100 års ensomhed er den fabulerende farverige og fantastiske krønike om den ensomt beliggende landsby Macondo og dens store Buendia-slægt med dens mangfoldige skæbner...
+                        </p>
+                        <button class="main__button" type="button">book den her bog</button>
+                    </div>
+                </article>
+
+                <article class="main__box fag" data-bookType="fag">
+                    <figure class="main__fig">
+                        <img src="content/images/books/fisker.jpg" alt="book" class="main__img">
+                    </figure>
+                    <div class="main__info-container">
+                        <h3 class="main__header-text">Den fuldkomne fisker</h3>
+                        <div class="main__hearts">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <p class="main__text">
+                            Biblen over alle bibler for lystfiskere. En hyldest til naturen i almindelighed og til lystfiskeri i særdeleshed med forord af Uffe Ellemann-Jensen og efterskrift af Kjeld Hillingsø.  Illustreret med Ib Andersens smukke vignetter...
+                        </p>
+                        <button class="main__button" type="button">book den her bog</button>
+                    </div>
+                </article>
+
+                <article class="main__box fag" data-bookType="fag">
+                    <figure class="main__fig">
+                        <img src="content/images/books/Samarbejdet.jpg" alt="book" class="main__img">
+                    </figure>
+                    <div class="main__info-container">
+                        <h3 class="main__header-text">Samarbejdet om den åbne...</h3>
+                        <div class="main__hearts">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <p class="main__text">
+                            DEN ÅBNE SKOLE rummer et meget stort potentiale for autentisk og problembaseret læring gennem inddragelse af virksomheder og andre samfundsaktører. Det kræver dog en stor indsats at få forskellige...
+                        </p>
+                        <button class="main__button" type="button">book den her bog</button>
+                    </div>
+                </article>
+
+                <article class="main__box unge" data-bookType="skoen">
+                    <figure class="main__fig">
+                        <img src="content/images/books/hele_byen.jpg" alt="book" class="main__img">
+                    </figure>
+                    <div class="main__info-container">
+                        <h3 class="main__header-text">Hele byen ved det</h3>
+                        <div class="main__hearts">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <p class="main__text">
+                            "Hele byen ved det" handler om Tommy, der vil gøre alt for at få hævn på sin chef og vælger at afsløre hende i utroskab. Det første anonyme brev bliver til det næste, og alle han kender, der har bedraget deres ægtefæller eller kærester står for skud...
+                        </p>
+                        <button class="main__button" type="button">book den her bog</button>
+                    </div>
+                </article>
+
+                <article class="main__box skoen" data-bookType="skoen">
+                    <figure class="main__fig">
+                        <img src="content/images/books/til_doeden.jpg" alt="book" class="main__img">
+                    </figure>
+                    <div class="main__info-container">
+                        <h3 class="main__header-text">Til døden os skiller</h3>
+                        <div class="main__hearts">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <p class="main__text">
+                            Jake og Alice modtager til deres bryllup en mystisk gave: En invitation til en eksklusiv klub, hvor alle medlemmer følger nogle enkle regler – for at passe godt på ægteskabet. Og hvilke nygifte vil ikke gerne det? Klubben kalder...
+                        </p>
+                        <button class="main__button" type="button">book den her bog</button>
+                    </div>
+                </article>
+
+                <article class="main__box unge" data-bookType="unge">
+                    <figure class="main__fig">
+                        <img src="content/images/books/sigurd.jpg" alt="book" class="main__img">
+                    </figure>
+                    <div class="main__info-container">
+                        <h3 class="main__header-text">Sigurd fortæller Danmarks...</h3>
+                        <div class="main__hearts">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <p class="main__text">
+                            Danmarkshistorien går 128.000 år tilbage og er både spændende og fantastisk! Med "Sigurd fortæller Danmarkshistorie" får alle børn mellem 6 og 12 år den ultimative historiebog!...
+                        </p>
+                        <button class="main__button" type="button">book den her bog</button>
+                    </div>
+                </article>
+
+                <article class="main__box fag" data-bookType="fag">
+                    <figure class="main__fig">
+                        <img src="content/images/books/diagnoser.jpg" alt="book" class="main__img">
+                    </figure>
+                    <div class="main__info-container">
+                        <h3 class="main__header-text">Diagnoser i myndighed...</h3>
+                        <div class="main__hearts">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <p class="main__text">
+                            For første gang på dansk behandles i denne bog myndighedsrådgiveres arbejde med børn og unge, der er diagnosticeret med autismespektrumforstyrrelser eller ADHD. Bogen belyser myndighedsarbejdet på handicapområdet ud fra...
+                        </p>
+                        <button class="main__button" type="button">book den her bog</button>
+                    </div>
+                </article>
+
+                <article class="main__box unge"  data-bookType="unge">
+                    <figure class="main__fig">
+                        <img src="content/images/books/et.jpg" alt="book" class="main__img">
+                    </figure>
+                    <div class="main__info-container">
+                        <h3 class="main__header-text">E.T.</h3>
+                        <div class="main__hearts">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <p class="main__text">
+                            Historien følger Elliott fra den dag, han finder E.T. og tager ham med hjem. Det er ikke sådan helt nemt at skjule et rumvæsen for sine forældre eller de slemme mænd, som vil fange E.T. Men der opstår en helt speciel forbindelse mellem Elliott...
+                        </p>
+                        <button class="main__button" type="button">book den her bog</button>
+                    </div>
+                </article>
+            </section>
+        </section>
+    </section>
+    <div class="popup__wrapper" id="popup">
+    <section class="popup">
+        <h2 class=" popup__headline"> Du er ved at book <span id="book-title">Heroes</span></h2>
+          <img src="content/images/poster_image_04.jpg" alt="" id="book-img" class="popup__fig-img ">
+        </figure>
+        <form class="popup-contact">
+          <input placeholder="Fulde Navn" type="text" required class="popup-contact__input" />
+          <input placeholder="Adresse" type="text" required class="popup-contact__input" />
+          <input placeholder="By" type="text" required class="popup-contact__input" />
+          <input placeholder="Post nr." type="text" required class="popup-contact__input" />
+          <input placeholder="Email" type="email" required class="popup-contact__input" />
+    
+          <label class="popup-contact-label">Låneperiode  fra:</label>
+          <input type="date" name="myDate" max="2019-24-08" class="popup-contact__input">
+    
+          <label class="popup-contact-label">Låneperiode  fra:</label>
+          <input type="date" name="myDate" min="2019-31-08" class="popup-contact__input">
+    
+        </form>
+        <button type="button" id="btn" class="popup-contact__btn">BOOK</button>
+      </section>
+    </div>
+</div>
     <!-- Font Awesome Icon Script  -->
+    <script src="content/js/main.js"></script>
     <script src="https://kit.fontawesome.com/3ae7ff667f.js"></script>
 </body>
 
