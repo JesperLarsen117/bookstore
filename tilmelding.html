@@ -8,12 +8,112 @@
     <meta name="description" content="Boghandleren">
     
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="content/css/style.css">
+    <link rel="stylesheet" href="content/css/styles.css">
     <title>Boghandleren</title>
 </head>
 <body>
+    <header class="header">
+            <section class="header__strip">
+                <ul class="header__menu">
+                    <li class="header-strip-item"><a class="header__strip-dropdown" href="books.html">Gennemse kategorier <i
+                                class="fas fa-chevron-down"></i></a>
+                        <ul class="header__dropdown">
+                            <li class="header__list"><a class="header__list-link" href="books.html">Skøn litteratur</a></li>
+                            <li class="header__list"><a class="header__list-link" href="books.html">Fag litteratur</a></li>
+                            <li class="header__list"><a class="header__list-link" href="books.html">Børn og unge</a></li>
+                        </ul>
+                    </li>
+                </ul>
+               <a href="index.html" class="header__strip-logo"><img draggable="false" src="content/images/logo.svg" alt="boghandlerens logo"></a>
+                <div class="header__strip-mobile-tab" id="rightMenuBtn">
+                    <div class="header__strip-mobile-tab-container">
+                        <span class="header__strip-mobile-tab-container-lines"></span>
+                        <span class="header__strip-mobile-tab-container-lines"></span>
+                        <span class="header__strip-mobile-tab-container-lines"></span>
+                    </div>
+                    <span class="header__strip-mobile-tab-line"></span>
+                    <p class="header__strip-mobile-tab-text">Menu</p>
+                </div>
+            </section>
+            <nav class="header__nav" id="rightMenu">
+                <i id="rightMenuBtnClose" class="header__nav-arrow fas fa-arrow-right"></i>
+                <a href="index.html" class="header__nav-logo"><img draggable="false" src="content/images/logo.svg" alt="boghandlerens logo"></a>
+                
+                <ul class="header__nav-menu">
+                    <li class="header__nav-menu-item"><a href="boghandleren.html" class="header__nav-menu-item-link">Om Boghandleren</a>
+                    </li>
+                    <li class="header__nav-menu-item"><a href="tilmelding.html" class="header__nav-menu-item-link">Bogklubben<i
+                                class="fas fa-chevron-down"></i></a>
+                        <ul class="header__nav-menu-item-dropdown">
+                            <li class="header__nav-menu-item-dropdown-item"><a href="tilmelding.html"
+                                    class="header__nav-menu-item-dropdown-item-link">Nyheder</a></li>
+                            <li class="header__nav-menu-item-dropdown-item"><a href="tilmelding.html"
+                                    class="header__nav-menu-item-dropdown-item-link">Arragementer</a></li>
+                            <li class="header__nav-menu-item-dropdown-item"><a href="tilmelding.html"
+                                    class="header__nav-menu-item-dropdown-item-link">Månedens bog</a></li>
+                            <li class="header__nav-menu-item-dropdown-item"><a href="tilmelding.html"
+                                    class="header__nav-menu-item-dropdown-item-link">Bog tips</a></li>
+                        </ul>
+                    </li>
+                    <li class="header__nav-menu-item"><a href="#" class="header__nav-menu-item-link">Akutuelt <i
+                                class="fas fa-chevron-down"></i></a>
+                        <ul class="header__nav-menu-item-dropdown">
+                            <li class="header__nav-menu-item-dropdown-item"><a href="books.html"
+                                    class="header__nav-menu-item-dropdown-item-link">Skøn litteratur</a></li>
+                            <li class="header__nav-menu-item-dropdown-item"><a href="books.html"
+                                    class="header__nav-menu-item-dropdown-item-link">Fag litteratur</a></li>
+                            <li class="header__nav-menu-item-dropdown-item"><a href="books.html"
+                                    class="header__nav-menu-item-dropdown-item-link">Børn og unge</a></li>
+                        </ul>
+                    </li>
+                    <li class="header__nav-menu-item"><a href="tilmelding.html" class="header__nav-menu-item-link">Tilmelding</a>
+        
+                    </li>
+                    <li class="header__nav-menu-item"><a href="books.html" class="header__nav-menu-item-link">Lånebørsen <i
+                                class="fas fa-chevron-down"></i></a>
+                        <ul class="header__nav-menu-item-dropdown">
+                            <li class="header__nav-menu-item-dropdown-item"><a href="boghandleren.html"
+                                    class="header__nav-menu-item-dropdown-item-link">Kontakt</a></li>
+                        </ul>
+                    </li>
+        
+                </ul>
+            </nav>
+        </header>
+        <br>
+    <main class="main">
+        <section class="main__tilmelding">
+            <form action="" class="main__tilmelding-form">
+                <h2 class="main__form-heading">Tilmeld dig til klub Boghandleren</h2>
+                <input type="text" name="fuldenavn" id="name" class="main__tilmelding-input" placeholder="Fulde Navn">
+                <input type="text" name="adresse" id="adress" class="main__tilmelding-input" placeholder="Adresse">
+                <input type="text" name="by" id="city" class="main__tilmelding-input" placeholder="By">
+                <input type="text" maxlength="4" name="post" id="post" class="main__tilmelding-input" placeholder="Post Nr.">
+                <input type="email" name="email" id="email" class="main__tilmelding-input" placeholder="E-Mail">
+                <button type="button" id="submit" class="main__tilmelding-btn">Book</button>
+            </form>
+            <br>
+            <figure class="main__tilmelding-fig">
+                <img src="content/images/Books_01.jpg" alt="" srcset="" class="main__tilmelding-img">
+            </figure>
+        </section>
+    
+    </main>
+    <footer class="footer">
+            <div class="footer__content">
+                <div class="footer__content-button"><a href="">FIND BUTIK</a></div>
+                <div class="footer__content-button"><a href="">KUNDESERVICE</a></div>
+                <div class="footer__content-button"><a href="">OM BOGHANDLEREN</a></div>
+                <div class="footer__content-button"><a href="">TILMELD KLUB BOGHANDLEREN</a></div>
+    
+            </div>
+            <div class="footer__text">
+                <p>&copy;Copyright 2019 Boghandleren</p>
+            </div>
+        </footer>
 
     <!-- Font Awesome Icon Script  -->
+    <script src="content/js/form.js"></script>
     <script src="https://kit.fontawesome.com/3ae7ff667f.js"></script>
 </body>
 </html>
