@@ -78,16 +78,11 @@ fagBtn.onclick = () => {
         skoen[i].style.opacity = "0";
         skoen[i].style.width = "0";
         skoen[i].style.margin = "0";
-        skoen[i].style.display = "none";
-
-        
     }
     for (let i = 0; i < unge.length; i++) {
         unge[i].style.opacity = "0";
         unge[i].style.width = "0";
         unge[i].style.margin = "0";
-        unge[i].style.display = "none";
-
     }
     for (let i = 0; i < fag.length; i++) {
         fag[i].style.opacity = "1";
@@ -103,13 +98,11 @@ skoenBtn.onclick = () => {
         fag[i].style.opacity = "0";
         fag[i].style.width = "0";
         fag[i].style.margin = "0";
-        fag[i].style.display = "none";
     }
     for (let i = 0; i < unge.length; i++) {
         unge[i].style.opacity = "0";
         unge[i].style.width = "0";
         unge[i].style.margin = "0";
-        unge[i].style.display = "none";
 
     }
     for (let i = 0; i < skoen.length; i++) {
@@ -124,15 +117,12 @@ ungeBtn.onclick = () => {
         fag[i].style.opacity = "0";
         fag[i].style.width = "0";
         fag[i].style.margin = "0";
-        fag[i].style.display = "none";
 
     }
     for (let i = 0; i < skoen.length; i++) {
         skoen[i].style.opacity = "0";
         skoen[i].style.width = "0";
         skoen[i].style.margin = "0";
-        skoen[i].style.display = "none";
-
     }
     for (let i = 0; i < unge.length; i++) {
         unge[i].style.opacity = "1";
@@ -162,6 +152,7 @@ allBtn.onclick = () => {
         fag[i].style.display = "inline-block";
     }
 }
+
 
 for (let i = 0; i < bookBtn.length; i++) {
     bookBtn[i].onclick = () => {

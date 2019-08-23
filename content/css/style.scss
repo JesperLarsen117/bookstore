@@ -56,30 +56,7 @@ $breakpoints: (
     background: linear-gradient($direction, $color-stops);
 }
 
-// Mixin breakpoints
-@mixin breakpoint($class) {
-    @if $class==xs {
-        @media (max-width: 767px) {
-            display: block;
-        }
-    }
-    @else if $class==sm {
-        @media (min-width: 768px) {}
-    }
-    @else if $class==md {
-        @media (min-width: 992px) {
-            @content;
-        }
-    }
-    @else if $class==lg {
-        @media (min-width: 1200px) {
-            @content;
-        }
-    }
-    @else {
-        @warn "Breakpoint mixin supports: xs, sm, md, lg";
-    }
-}
+
 
 * {
     margin: 0;
@@ -287,7 +264,7 @@ body {
         transform: translate(-50%, -50%);
         left: 50%;
         top: 50%;
-        font-size: 4em;
+        font-size: 4vw;
         font-family: 'Josefin Sans', sans-serif;
         text-shadow: 1px 1px #949090;
     }
@@ -358,34 +335,17 @@ body {
             margin-bottom: 15px;
         }
     }
+    figure {
+        overflow: hidden;
+    }
     img {
-        width: 100%;
-        height: 295px;
+        // width: 100%;
+        // height: 295px;
         border: 1px solid lightgray;
     }
 }
 
-.footer__content {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    height: 70px;
-    background-color: $highlight-color;
-    text-align: center;
-    font-size: 1em;
-    margin-top: 80px;
-    padding: 25px;
-    a {
-        text-decoration: none;
-        color: white;
-        padding: 1em;
-    }
-    &-button:last-child {
-        border: unset;
-    }
-    &-button {
-        border-right: 1px solid gray;
-    }
-}
+
 
 // FOOTER START
 .footer__content {
@@ -397,6 +357,7 @@ body {
     font-size: 1em;
     margin-top: 80px;
     padding: 25px;
+    height: 165px;
     @include breakpoint(mobile) {
         grid-template-columns: 1fr 1fr 1fr 1fr;
         height: 70px;
@@ -966,7 +927,27 @@ body {
         margin-top: 340px;
     }
 }
-
+.container {
+    width: 80%; 
+    margin: 0 auto;
+}
 @media only screen and (max-width: 1300px) {
-    
+    .container {
+        width: 100%;
+    }
+    .header__nav {
+        width: 50%;
+    }
+    .content__article {
+        overflow: unset;
+        margin-top: 5em;
+    }
+    .footer {
+        margin-top: 5em;
+    }
+}
+@media only screen and (max-width: 1000px){
+    .header__strip {
+        grid-template-columns: 30% 1fr 30%;
+    }
 }

@@ -270,7 +270,7 @@ body {
           transform: translate(-50%, -50%);
   left: 50%;
   top: 50%;
-  font-size: 4em;
+  font-size: 4vw;
   font-family: 'Josefin Sans', sans-serif;
   text-shadow: 1px 1px #949090;
 }
@@ -355,37 +355,12 @@ body {
   margin-bottom: 15px;
 }
 
+.content__article figure {
+  overflow: hidden;
+}
+
 .content__article img {
-  width: 100%;
-  height: 295px;
   border: 1px solid lightgray;
-}
-
-.footer__content {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-  height: 70px;
-  background-color: #20CAAE;
-  text-align: center;
-  font-size: 1em;
-  margin-top: 80px;
-  padding: 25px;
-}
-
-.footer__content a {
-  text-decoration: none;
-  color: white;
-  padding: 1em;
-}
-
-.footer__content-button:last-child {
-  border: unset;
-}
-
-.footer__content-button {
-  border-right: 1px solid gray;
 }
 
 .footer__content {
@@ -399,6 +374,15 @@ body {
   font-size: 1em;
   margin-top: 80px;
   padding: 25px;
+  height: 165px;
+}
+
+@media (min-width: 767px) {
+  .footer__content {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    height: 70px;
+  }
 }
 
 .footer__content a {
@@ -413,9 +397,21 @@ body {
   color: #414141;
 }
 
+@media (min-width: 767px) {
+  .footer__content-button:last-child {
+    border: unset;
+  }
+}
+
 .footer__content-button {
   border-right: 1px solid white;
   border-left: 1px solid white;
+}
+
+@media (min-width: 767px) {
+  .footer__content-button {
+    border-left: unset;
+  }
 }
 
 .footer {
@@ -1032,6 +1028,34 @@ body {
 @media (max-width: 1300px) {
   .section__article-bottem img {
     margin-top: 340px;
+  }
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 1300px) {
+  .container {
+    width: 100%;
+  }
+  .header__nav {
+    width: 50%;
+  }
+  .content__article {
+    overflow: unset;
+    margin-top: 5em;
+  }
+  .footer {
+    margin-top: 5em;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .header__strip {
+    -ms-grid-columns: 30% 1fr 30%;
+        grid-template-columns: 30% 1fr 30%;
   }
 }
 /*# sourceMappingURL=style.css.map */
